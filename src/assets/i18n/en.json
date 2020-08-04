@@ -1,6 +1,9 @@
 {
     "HEADER": 
     {
-        "ABOUT_US": "About us"
+        "ABOUT_US": "Despre noi",
+        "HOME": "Pagina principală",
+        "PLANT_LIST": "Plantele noastre",
+        "MY_PLANT": "Planta mea"
     }
 }
