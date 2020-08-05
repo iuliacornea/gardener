@@ -1,0 +1,57 @@
+[
+    {
+        "id": "suculent",
+        "name": "Suculente",
+        "latinName": "Excepteur sint occaecat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "soilType": "Duis aute",
+        "soilHumidity": "LOW",
+        "image": "/assets/images/suculent.jpg",
+        "avatar": "/assets/images/suculent_avatar.jpg"
+
+    },
+    {
+        "id": "cactus",
+        "name": "Cactuși",
+        "latinName": "Excepteur sint occaecat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "soilType": "Duis aute",
+        "soilHumidity": "LOW",
+        "image": "/assets/images/cactus.jpg",
+        "avatar": "/assets/images/cactus_avatar.jpg"
+
+    },
+    {
+        "id": "flamingo_lily",
+        "name": "Pasărea flamingo",
+        "latinName": "Excepteur sint occaecat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "soilType": "Duis aute",
+        "soilHumidity": "",
+        "image": "/assets/images/flamingo_lily.jpg",
+        "avatar": "/assets/images/flamingo_lily_avatar.jpg"
+
+    },
+    {
+        "id": "monstera",
+        "name": "Monstera",
+        "latinName": "Excepteur sint occaecat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "soilType": "Duis aute",
+        "soilHumidity": "MEDIUM",
+        "image": "/assets/images/monstera.jpg",
+        "avatar": "/assets/images/monstera_avatar.jpg"
+
+    },
+    {
+        "id": "spider_plant",
+        "name": "Planta paianjen",
+        "latinName": "Excepteur sint occaecat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "soilType": "Duis aute",
+        "soilHumidity": "HIGH",
+        "image": "/assets/images/spider_plant.jpg",
+        "avatar": "/assets/images/spider_plant_avatar.jpg"
+
+    }
+]

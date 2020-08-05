@@ -10,13 +10,14 @@ import { AboutComponent } from './pages/about/about.component';
 import { PlantCardComponent } from './pages/plant/plant-card/plant-card.component';
 import { PlantListComponent } from './pages/plant/plant-list/plant-list.component';
 import { MyPlantComponent } from './pages/plant/my-plant/my-plant.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu'
+import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
 
@@ -52,7 +53,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

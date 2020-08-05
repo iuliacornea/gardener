@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as plantsFile from 'src/assets/plants.json';
 
 @Component({
   selector: 'gar-plant-list',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlantListComponent implements OnInit {
 
+  plants = []
   constructor() { }
 
   ngOnInit(): void {
+    this.plants = (plantsFile as any).default
+    console.log(this.plants)
   }
 
 }

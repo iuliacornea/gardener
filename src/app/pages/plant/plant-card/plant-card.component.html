@@ -1,1 +1,27 @@
-<p>plant-card works!</p>
+<mat-card class="card">
+    <mat-card-header>
+        <img mat-card-avatar src="{{plant.avatar}}">
+        <mat-card-title>{{plant.name}}</mat-card-title>
+        <mat-card-subtitle>{{plant.latinName}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{plant.image}}" class="card-image">
+    <mat-card-content class="card-content">
+        <div *ngIf="displayDescription">
+            {{plant.description}}
+        </div>
+        <div *ngIf="!displayDescription">
+            <label>{{"CARD.SOIL" | translate}}</label>
+            <p>{{plant.soilType}}</p>
+            <label>{{"CARD.SOIL_HUMIDITY" | translate}}</label>
+            <p>{{plant.soilHumidity}}</p>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="displayDescription = true">
+            {{"CARD.DESCRIPTION" | translate}}
+        </button>
+        <button mat-button (click)="displayDescription = false">
+            {{"CARD.SPECS" | translate}}
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -10,5 +10,15 @@
         "PURPLE_GREEN": "Violet - Verde",
         "PINK_BLUEGREY": "Roz - Gri albăstrui",
         "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
+    },
+    "CARD":
+    {
+        "DESCRIPTION": "Descriere",
+        "SPECS": "Specificații",
+        "LIGHT": "Lumină",
+        "SOIL": "Tipul solului",
+        "POT_SIZE": "Dimensiune ghiveci",
+        "AIR_HUMIDITY": "Umiditate aer",
+        "SOIL_HUMIDITY": "Umiditate sol"
     }
 }

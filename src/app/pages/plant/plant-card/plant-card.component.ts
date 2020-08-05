@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gar-plant-card',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlantCardComponent implements OnInit {
 
+  @Input()
+  plant: any
+
+  displayDescription = true;
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.plant)
+    console.log(this.plant.name)
+
   }
 
 }
