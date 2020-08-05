@@ -5,5 +5,12 @@
         "HOME": "Pagina principală",
         "PLANT_LIST": "Plantele noastre",
         "MY_PLANT": "Planta mea"
+    },
+    "THEME": 
+    {
+        "INDIGO_PINK": "Indigo - Roz",
+        "PURPLE_GREEN": "Violet - Verde",
+        "PINK_BLUEGREY": "Roz - Gri albăstrui",
+        "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
     }
 }

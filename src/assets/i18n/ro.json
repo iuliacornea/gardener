@@ -8,6 +8,9 @@
     },
     "THEME": 
     {
-        "INDIGO_PINK": "Roz indigo"
+        "INDIGO_PINK": "Indigo - Roz",
+        "PURPLE_GREEN": "Violet - Verde",
+        "PINK_BLUEGREY": "Roz - Gri albăstrui",
+        "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
     }
 }
