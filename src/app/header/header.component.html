@@ -1,20 +1,21 @@
 <mat-toolbar color="primary">
-
-    <mat-toolbar-row>
-            <span>{{ "HEADER.HOME" | translate }}</span>
-            <gar-theme-switcher></gar-theme-switcher>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row *ngIf="expandMenu" routerLinkActive="active" routerLink="/about-us" (click)="expandMenu = !expandMenu" >
-        <span>{{ "HEADER.ABOUT_US" | translate }}</span>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row *ngIf="expandMenu">
-        <span  routerLink="/plant-list" routerLinkActive="active" >{{ "HEADER.PLANT_LIST" | translate }}</span>
-    </mat-toolbar-row>
-
-    <mat-toolbar-row *ngIf="expandMenu">
-        <span  routerLink="/my-plant" routerLinkActive="active" >{{ "HEADER.MY_PLANT" | translate }}</span>
-    </mat-toolbar-row>
-
+  <mat-toolbar-row class="menu">
+    <div>
+      <button mat-icon-button routerLink="/home">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-button routerLink="/plant-list">
+        {{ "HEADER.PLANT_LIST" | translate }}
+      </button>
+      <button mat-button routerLink="/my-plant">
+        {{ "HEADER.MY_PLANT" | translate }}
+      </button>
+      <button mat-button routerLink="/about-us">
+        {{ "HEADER.ABOUT_US" | translate }}
+      </button>
+    </div>
+    <div>
+      <gar-theme-switcher></gar-theme-switcher>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>

@@ -1,13 +1,11 @@
 {
-    "HEADER": 
-    {
+    "HEADER": {
         "ABOUT_US": "Despre noi",
         "HOME": "Pagina principală",
         "PLANT_LIST": "Plantele noastre",
         "MY_PLANT": "Planta mea"
     },
-    "THEME": 
-    {
+    "THEME": {
         "INDIGO_PINK": "Indigo - Roz",
         "PURPLE_GREEN": "Violet - Verde",
         "PINK_BLUEGREY": "Roz - Gri albăstrui",
