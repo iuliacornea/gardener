@@ -1,0 +1,71 @@
+{
+    "id": "spikes",
+    "question": {
+        "en": "Does it have spikes?",
+        "ro": "Are țepi"
+    },
+    "answer": {
+        "yes": {
+            "id": "wood-stem",
+            "question": {
+                "en": "Does it have a woody stem?",
+                "ro": "Are tulpina lemnoasă?"
+            },
+            "answer": {
+                "yes": {
+                    "id": "flowers",
+                    "question": {
+                        "en": "Does is make flowers?",
+                        "ro": "Face flori?"
+                    },
+                    "answer": {
+                        "yes": {
+                            "id": "take-picture",
+                            "hypothesis": {
+                                "en": "rose",
+                                "ro": "trandafir"
+                            }
+                        },
+                        "no": {
+                            "id": "take-picture",
+                            "hypothesis": {
+                                "en": "conifer",
+                                "ro": "conifer"
+                            }
+                        }
+                    }
+                },
+                "no": {
+                    "id": "take-picture",
+                    "hypothesis": {
+                        "en": "cactus",
+                        "ro": "cactus"
+                    }
+                }
+            }
+        },
+        "no": {
+            "id": "fleshy-leave",
+            "question": {
+                "en": "Does is heve fleshy leaves?",
+                "ro": "Are frunze cărnoase?"
+            },
+            "answer": {
+                "yes": {
+                    "id": "suculent",
+                    "hypothesis": {
+                        "en": "suculent",
+                        "ro": "suculentă"
+                    }
+                },
+                "no": {
+                    "id": "take-picture",
+                    "hypothesis": {
+                        "en": "none",
+                        "ro": "none"
+                    }
+                }
+            }
+        }
+    }
+}
