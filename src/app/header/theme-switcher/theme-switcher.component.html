@@ -1,0 +1,8 @@
+<button mat-icon-button [matMenuTriggerFor]="themeMenu">
+    <mat-icon>brush</mat-icon>
+</button>
+<mat-menu #themeMenu="matMenu">
+    <button *ngFor="let theme of themes" mat-menu-item (click)="onThemeSwitch(theme)">
+        {{theme.name | translate}}
+    </button>
+</mat-menu>

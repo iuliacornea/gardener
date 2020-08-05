@@ -5,5 +5,9 @@
         "HOME": "Pagina principală",
         "PLANT_LIST": "Plantele noastre",
         "MY_PLANT": "Planta mea"
+    },
+    "THEME": 
+    {
+        "INDIGO_PINK": "Roz indigo"
     }
 }

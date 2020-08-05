@@ -16,7 +16,9 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatMenuModule } from '@angular/material/menu'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component'
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -32,7 +34,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AboutComponent,
     PlantCardComponent,
     PlantListComponent,
-    MyPlantComponent
+    MyPlantComponent,
+    ThemeSwitcherComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

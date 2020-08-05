@@ -1,7 +1,8 @@
-<mat-toolbar >
+<mat-toolbar color="primary">
 
-    <mat-toolbar-row (click)="expandMenu = !expandMenu">
+    <mat-toolbar-row>
             <span>{{ "HEADER.HOME" | translate }}</span>
+            <gar-theme-switcher></gar-theme-switcher>
     </mat-toolbar-row>
 
     <mat-toolbar-row *ngIf="expandMenu" routerLinkActive="active" routerLink="/about-us" (click)="expandMenu = !expandMenu" >
