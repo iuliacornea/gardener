@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PlantCardComponent } from './pages/plant/plant-card/plant-card.component';
 import { PlantListComponent } from './pages/plant/plant-list/plant-list.component';
-import { MyPlantComponent } from './pages/plant/my-plant/my-plant.component';
+import { PlantIdentificationComponent } from './pages/plant/plant-identification/plant-identification.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -20,6 +20,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {PlantIdentificationDialog} from './pages/plant/plant-identification/plant-identification.component';
+import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component'
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -35,8 +38,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AboutComponent,
     PlantCardComponent,
     PlantListComponent,
-    MyPlantComponent,
-    ThemeSwitcherComponent
+    PlantIdentificationComponent,
+    PlantIdentificationDialog,
+    ThemeSwitcherComponent,
+    PlantFormComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +59,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    PlantIdentificationDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

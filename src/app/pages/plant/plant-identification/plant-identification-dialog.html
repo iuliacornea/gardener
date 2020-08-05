@@ -1,0 +1,23 @@
+ <ng-container *ngIf="!!data && !isHypothesis(data)">
+  <h1 mat-dialog-title>{{data.question.ro}}</h1>
+  <mat-dialog-content>
+  
+  </mat-dialog-content>
+  <mat-dialog-actions align="start">
+    <button mat-button (click)="onAnswer(data.answer.yes)">{{"YES" | translate}}</button>
+    <button mat-button (click)="onAnswer(data.answer.no)">{{"NO" | translate}}</button>
+  </mat-dialog-actions>
+ </ng-container>
+ <ng-container *ngIf="!!data && isHypothesis(data)">
+  <h1 mat-dialog-title>Based on your responses we have reached a hypothesis</h1>
+  <mat-dialog-content>
+    {{data.hypothesis.ro}}
+  </mat-dialog-content>
+  <mat-dialog-actions align="start">
+    <button mat-button >Upload picture</button>
+  
+  </mat-dialog-actions>
+ </ng-container>
+ 
+
+

@@ -2,7 +2,7 @@
     "id": "spikes",
     "question": {
         "en": "Does it have spikes?",
-        "ro": "Are țepi"
+        "ro": "Are țepi?"
     },
     "answer": {
         "yes": {
