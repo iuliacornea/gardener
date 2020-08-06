@@ -1,0 +1,21 @@
+.plant-form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+.section {
+    display: flex;
+    flex-flow: column;
+    margin-top: 16px;
+    margin-bottom: 16px;;
+}
+
+.section label {
+    margin-bottom: 8px;
+}
+
+.fit-content {
+    width: fit-content;
+}

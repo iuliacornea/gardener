@@ -22,7 +22,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {PlantIdentificationDialog} from './pages/plant/plant-identification/plant-identification.component';
-import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component'
+import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input'
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -60,7 +65,12 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatButtonModule,
     MatMenuModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonToggleModule,
+    MatDividerModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   entryComponents: [
     PlantIdentificationDialog
