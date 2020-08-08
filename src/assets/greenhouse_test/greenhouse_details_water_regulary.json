@@ -1,0 +1,10 @@
+{
+    "mode": {
+        "type": "WATER_REGULARY",
+        "days": 2,
+        "milliliters": 100
+    },
+    "airTemperature": 33,
+    "airHumidity": 14,
+    "soilHumidity": 456
+}

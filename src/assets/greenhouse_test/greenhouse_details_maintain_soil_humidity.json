@@ -1,0 +1,9 @@
+{
+    "mode": {
+        "type": "MAINTAIN_SOIL_HUMIDITY",
+        "soilHumidity": 550
+    },
+    "airTemperature": 33,
+    "airHumidity": 14,
+    "soilHumidity": 456
+}

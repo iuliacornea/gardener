@@ -27,8 +27,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input'
-
+import {MatInputModule} from '@angular/material/input';
+import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -46,7 +47,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     PlantIdentificationComponent,
     PlantIdentificationDialog,
     ThemeSwitcherComponent,
-    PlantFormComponent
+    PlantFormComponent,
+    GreenhouseDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +72,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatDividerModule,
     MatCheckboxModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   entryComponents: [
     PlantIdentificationDialog
