@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as plantsFile from 'src/assets/plants.json';
+import {PlantsService} from '@com.iulia/gardener-api';
 
 @Component({
   selector: 'gar-plant-list',
@@ -8,12 +9,17 @@ import * as plantsFile from 'src/assets/plants.json';
 })
 export class PlantListComponent implements OnInit {
 
-  plants = []
-  constructor() { }
+  plants = [];
+  constructor(private plantTypeService: PlantsService) { }
 
   ngOnInit(): void {
-    this.plants = (plantsFile as any).default
-    console.log(this.plants)
+    this.plantTypeService.getPlants().subscribe( result =>
+    {
+      alert('check console for result');
+      console.log(result);
+    });
+    this.plants = (plantsFile as any).default;
+    console.log(this.plants);
   }
 
 }

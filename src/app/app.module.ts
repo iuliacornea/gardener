@@ -28,8 +28,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component'
+import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BASE_PATH} from '@com.iulia/gardener-api';
+import {B} from '@angular/cdk/keycodes';
+
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -79,7 +82,12 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   entryComponents: [
     PlantIdentificationDialog
   ],
-  providers: [],
+  providers: [
+    {
+      provide: BASE_PATH,
+      useValue: '/api'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
