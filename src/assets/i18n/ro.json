@@ -1,16 +1,27 @@
 {
-    "HEADER": 
-    {
-        "ABOUT_US": "Despre noi",
-        "HOME": "Pagina principală",
-        "PLANT_LIST": "Plantele noastre",
-        "MY_PLANT": "Planta mea"
-    },
-    "THEME": 
-    {
-        "INDIGO_PINK": "Indigo - Roz",
-        "PURPLE_GREEN": "Violet - Verde",
-        "PINK_BLUEGREY": "Roz - Gri albăstrui",
-        "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
+  "HEADER": {
+    "ABOUT_US": "Despre noi",
+    "HOME": "Pagina principală",
+    "PLANT_LIST": "Plantele noastre",
+    "MY_PLANT": "Planta mea"
+  },
+  "THEME": {
+    "INDIGO_PINK": "Indigo - Roz",
+    "PURPLE_GREEN": "Violet - Verde",
+    "PINK_BLUEGREY": "Roz - Gri albăstrui",
+    "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
+  },
+  "FORM": {
+    "LEAF_VEIN_TYPE": {
+      "ARCUATE": "Arcuate",
+      "CROSS_VENULATE": "Crossvenulate",
+      "DICHTOMOUS": "Dichotomous",
+      "LONGITUDINAL": "Longitudinal",
+      "PALMATE": "Palmate",
+      "PARALLEL": "Parallel",
+      "PINNATE": "Pinnate",
+      "RETICULATE": "Reticulate",
+      "ROTATE": "Rotate"
     }
+  }
 }

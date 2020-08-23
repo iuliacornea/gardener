@@ -1,5 +1,5 @@
 <div class="section">
-  <label>{{"FORM.PLANT_STEM_TYPES" | translate}}</label>
+  <label>{{"FORM.PLANT_STEM_TYPE_LABEL" | translate}}</label>
   <mat-button-toggle-group #plantTypeGroup="matButtonToggleGroup" [(ngModel)]="featuresConfig.stemType">
     <mat-button-toggle *ngFor="let val of stemType" value="{{val}}">
       {{"FORM.PLANT_STEM_TYPE." + val | translate}}
@@ -7,10 +7,8 @@
   </mat-button-toggle-group>
 </div>
 
-<mat-divider></mat-divider>
-
 <div class="section">
-  <label>{{"FORM.FLOWERS" | translate}}</label>
+  <label>{{"FORM.FLOWER_LABEL" | translate}}</label>
   <mat-button-toggle-group #flowerGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.flowerExistance">
     <mat-button-toggle *ngFor="let val of flowerExistance" value="{{val}}">
@@ -20,7 +18,7 @@
 </div>
 
 <div class="section">
-  <label>{{"FORM.FLOWER_SHAPE_TYPES" | translate}}</label>
+  <label>{{"FORM.FLOWER_SHAPE_TYPE_LABEL" | translate}}</label>
   <mat-button-toggle-group #flowerShapeTypeGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.flowerShape">
     <mat-button-toggle *ngFor="let val of flowerShape" value="{{val}}">
@@ -30,7 +28,7 @@
 </div>
 
 <div class="section">
-  <label>{{"FORM.FLOWER_PETAL_TYPES" | translate}}</label>
+  <label>{{"FORM.FLOWER_PETAL_TYPE_LABEL" | translate}}</label>
   <mat-button-toggle-group #flowerPetalTypeGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.flowerPetals">
     <mat-button-toggle *ngFor="let val of flowerPetals" value="{{val}}">
@@ -39,44 +37,42 @@
   </mat-button-toggle-group>
 </div>
 
-<mat-divider></mat-divider>
-
 <div class="section">
-  <label>{{"FORM.LEAVES" | translate}}</label>
+  <label>{{"FORM.LEAF_DIVISION_OF_BLADE_LABEL" | translate}}</label>
   <mat-button-toggle-group #leafGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.leafDivisionOfBlade">
     <mat-button-toggle *ngFor="let val of leafDivisionOfBlade" value="{{val}}">
-      {{"FORM.LEAF." + val | translate}}
+      {{"FORM.LEAF_DIVISION_OF_BLADE." + val | translate}}
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 
 <div class="section">
-  <label>{{"FORM.LEAF_TYPES" | translate}}</label>
+  <label>{{"FORM.LEAF_ARRANGEMENT_ON_STEM_LABEL" | translate}}</label>
   <mat-button-toggle-group #leafTypeGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.leafArrangementOnTheStem">
     <mat-button-toggle *ngFor="let val of leafArrangementOnTheStem" value="{{val}}">
-      {{"FORM.LEAF_TYPE." + val | translate}}
+      {{"FORM.LEAF_ARRANGEMENT_ON_STEM." + val | translate}}
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 
 <div class="section">
-  <label>{{"FORM.LEAF_BRANCHING_PATTERN_TYPES" | translate}}</label>
+  <label>{{"FORM.LEAF_SURFACE_LABEL" | translate}}</label>
   <mat-button-toggle-group #leafBranchingPatternTypeGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.leafSurface">
     <mat-button-toggle *ngFor="let val of leafSurface" value="{{val}}">
-      {{"FORM.LEAF_BRANCHING_PATTERN_TYPE." + val | translate}}
+      {{"FORM.LEAF_SURFACE." + val | translate}}
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 
 <div class="section">
-  <label>{{"FORM.LEAF_TEXTURE_TYPES" | translate}}</label>
+  <label>{{"FORM.LEAF_TEXTURE_LABEL" | translate}}</label>
   <mat-button-toggle-group #leafTextureTypeGroup="matButtonToggleGroup"
                            [(ngModel)]="featuresConfig.leafTexture">
     <mat-button-toggle *ngFor="let val of leafTexture" value="{{val}}">
-      {{"FORM.LEAF_TEXTURE_TYPE." + val | translate}}
+      {{"FORM.LEAF_TEXTURE." + val | translate}}
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
@@ -92,10 +88,8 @@
   </mat-button-toggle-group>
 </div>
 
-<mat-divider></mat-divider>
-
 <div class="section">
-  <label>{{"FORM.SPIKES" | translate}}</label>
+  <label>{{"FORM.SPIKES_LABEL" | translate}}</label>
   <mat-button-toggle-group #spikeGroup="matButtonToggleGroup" [(ngModel)]="featuresConfig.stemSpikes">
     <mat-button-toggle *ngFor="let val of stemSpikes" value="{{val}}">
       {{"FORM.SPIKE." + val | translate}}

@@ -1,28 +1,129 @@
 {
-    "HEADER": {
-        "ABOUT_US": "Despre noi",
-        "HOME": "Pagina principală",
-        "PLANT_LIST": "Plantele noastre",
-        "MY_PLANT": "Planta mea"
+  "HEADER": {
+    "ABOUT_US": "Despre noi",
+    "HOME": "Pagina principală",
+    "PLANT_LIST": "Plantele noastre",
+    "MY_PLANT": "Planta mea"
+  },
+  "THEME": {
+    "INDIGO_PINK": "Indigo - Roz",
+    "PURPLE_GREEN": "Violet - Verde",
+    "PINK_BLUEGREY": "Roz - Gri albăstrui",
+    "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
+  },
+  "CARD": {
+    "DESCRIPTION": "Descriere",
+    "SPECS": "Specificații",
+    "LIGHT": "Lumină",
+    "SOIL": "Tipul solului",
+    "POT_SIZE": "Dimensiune ghiveci",
+    "AIR_HUMIDITY": "Umiditate aer",
+    "SOIL_HUMIDITY": "Umiditate sol"
+  },
+  "PLANT": {
+    "OPEN_DIALOG": "Găsește planta mea"
+  },
+  "YES": "Yes",
+  "NO": "No",
+  "FORM": {
+    "PLANT_NAME": "Name",
+    "PLANT_DESCRIPTION": "Description",
+    "PLANT_IMAGE": "Image URL",
+    "PLANT_STEM_TYPE_LABEL": "Stem type",
+    "PLANT_STEM_TYPE": {
+      "HERBACEOUS": "Herbaceous",
+      "WOODY": "Woody",
+      "NOT_VISIBLE": "Can not tell if it has a stem"
     },
-    "THEME": {
-        "INDIGO_PINK": "Indigo - Roz",
-        "PURPLE_GREEN": "Violet - Verde",
-        "PINK_BLUEGREY": "Roz - Gri albăstrui",
-        "DEEPPURPLE_AMBER": "Violet închis - Chihlimbar"
+    "FLOWER_LABEL": "Does it have flowers",
+    "FLOWER": {
+      "YES": "Yes",
+      "NO": "No"
     },
-    "CARD": {
-        "DESCRIPTION": "Descriere",
-        "SPECS": "Specificații",
-        "LIGHT": "Lumină",
-        "SOIL": "Tipul solului",
-        "POT_SIZE": "Dimensiune ghiveci",
-        "AIR_HUMIDITY": "Umiditate aer",
-        "SOIL_HUMIDITY": "Umiditate sol"
+    "FLOWER_SHAPE_TYPE_LABEL": "Flower shape",
+    "FLOWER_SHAPE_TYPE": {
+      "REGULAR": "Regular",
+      "IREGULAR": "Irregular"
     },
-    "PLANT": {
-        "OPEN_DIALOG": "Găsește planta mea"
+    "FLOWER_PETAL_TYPE_LABEL": "Flower petals",
+    "FLOWER_PETAL_TYPE": {
+      "FAN": "Fan",
+      "SEPARATED": "Separated",
+      "UNITED": "United"
     },
-    "YES": "Yes",
-    "NO": "No"
+    "LEAF_DIVISION_OF_BLADE_LABEL": "Leaf division of blade",
+    "LEAF_DIVISION_OF_BLADE": {
+      "SIMPLE": "Simple",
+      "WITH_LEAFLETS": "With leaflets",
+      "PINNATE_COMPOUND": "Pinnate compound",
+      "PALMATE_COMPOUND": "Palmate compound",
+      "DOUBLE_COMPOUND": "Double compound"
+    },
+    "LEAF_ARRANGEMENT_ON_STEM_LABEL": "Leaf arrangement on stem",
+    "LEAF_ARRANGEMENT_ON_STEM": {
+      "BASAL": "Basal",
+      "WHORLED": "Whorled",
+      "ALTERNATE": "Alternate",
+      "OPPOSITE": "Opposite"
+    },
+    "LEAF_SURFACE_LABEL": "Leaf surface",
+    "LEAF_SURFACE": {
+      "SMOOTH": "Smooth",
+      "HAIRY": "Hairy",
+      "WARTY": "Warty",
+      "PLEATED": "Pleated",
+      "ROUGHENED_RIDGES": "Roughened ridged",
+      "GROOVED": "Grooved"
+    },
+    "LEAF_TEXTURE_LABEL": "Leaf texture",
+    "LEAF_TEXTURE": {
+      "LEATHERY": "Leathery",
+      "STICKY": "Sticky",
+      "FLESHY": "Fleshy",
+      "GRASSY": "Grassy",
+      "NEEDLE": "Needle",
+      "RUGOSE": "Rugose",
+      "SPIKE": "Spike"
+    },
+    "LEAF_VEIN_TYPE": {
+      "ARCUATE": "Arcuate",
+      "CROSS_VENULATE": "Crossvenulate",
+      "DICHTOMOUS": "Dichotomous",
+      "LONGITUDINAL": "Longitudinal",
+      "PALMATE": "Palmate",
+      "PARALLEL": "Parallel",
+      "PINNATE": "Pinnate",
+      "RETICULATE": "Reticulate",
+      "ROTATE": "Rotate"
+    },
+    "SPIKES_LABEL": "Spikes",
+    "SPIKE": {
+      "NO": "No spikes",
+      "SOFT": "Soft spikes",
+      "WOODY": "Hard woody spikes"
+    },
+    "SOIL_TYPE_LABEL": "Soil type",
+    "SOIL_TYPE": {
+      "REGULAR": "Regular soil",
+      "CONIFERS": "Conifers soil",
+      "ORCHID": "Orchid soil",
+      "SUCCULENTS": "Cactus and succulents soil"
+    },
+    "SOIL_QUANTITY_LABEL": "Soil quantity in respect to plant size",
+    "SOIL_HUMIDITY_SUMMER": "Soil humidity in summer",
+    "SOIL_HUMIDITY_WINTER": "Soil humidity in winter",
+    "AIR_HUMIDITY": "Air humidity",
+    "AIR_TEMPERATURE_SUMMER": "Air temperature in summer",
+    "AIR_TEMPERATURE_WINTER": "Air temperature in winter",
+    "LIGHT_INTENSITY_SUMMER": "Light intensity in summer",
+    "LIGHT_INTENSITY_WINTER": "Light intensity in winter",
+    "SCALE": {
+      "VERY_LOW": "Very low",
+      "LOW": "Low",
+      "MEDIUM": "Medium",
+      "HIGH": "High",
+      "VERY_HIGH": "Very high"
+    },
+    "SAVE": "Save"
+  }
 }

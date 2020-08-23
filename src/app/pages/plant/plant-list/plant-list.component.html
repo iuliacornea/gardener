@@ -1,3 +1,11 @@
-<div class="plant-list">
+<div class="plant-list-container">
+  <button mat-fab color="primary" routerLink="/add-plant" class="add-button">
+    <mat-icon>add</mat-icon>
+  </button>
+  <div class="plant-list">
     <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+  </div>
+
 </div>
+
+

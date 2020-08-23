@@ -22,7 +22,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ThemeSwitcherComponent} from './header/theme-switcher/theme-switcher.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {PlantIdentificationDialog} from './pages/plant/plant-identification/plant-identification.component';
-import {PlantFeaturesFormComponent} from './pages/plant/plant-features-form/plant-features-form.component';
+import {PlantFeaturesFormComponent} from './pages/plant/plant-form/plant-features-form/plant-features-form.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -32,8 +32,12 @@ import {GreenhouseDetailsComponent} from './pages/greenhouse/greenhouse-details/
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BASE_PATH} from '@com.iulia/gardener-api';
 import {ApiModule as GardenerModule} from '@com.iulia/gardener-api';
-import {PlantGrowingConfigsFormComponent} from './pages/plant/plant-growing-configs-form/plant-growing-configs-form.component';
+import {PlantGrowingConfigsFormComponent} from './pages/plant/plant-form/plant-growing-configs-form/plant-growing-configs-form.component';
 import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component';
+import {MatSelectModule} from '@angular/material/select';
+import { PlantDetailsFormComponent } from './pages/plant/plant-form/plant-details-form/plant-details-form.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { GardenComponent } from './pages/garden/garden.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -55,7 +59,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     PlantFeaturesFormComponent,
     GreenhouseDetailsComponent,
     PlantGrowingConfigsFormComponent,
-    PlantFormComponent
+    PlantFormComponent,
+    PlantDetailsFormComponent,
+    GardenComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    GardenerModule
+    GardenerModule,
+    MatSelectModule,
+    MatTabsModule
   ],
   entryComponents: [
     PlantIdentificationDialog

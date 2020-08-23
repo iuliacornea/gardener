@@ -5,10 +5,11 @@ import { PlantListComponent } from './pages/plant/plant-list/plant-list.componen
 import { AboutComponent } from './pages/about/about.component';
 import { PlantIdentificationComponent } from './pages/plant/plant-identification/plant-identification.component';
 import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component';
+import {PlantFormComponent} from './pages/plant/plant-form/plant-form.component';
 
 const routes: Routes = [
   {
-    path: 'home', 
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -26,7 +27,12 @@ const routes: Routes = [
   {
     path: 'greenhouse',
     component: GreenhouseDetailsComponent
-  }//,
+  },
+  {
+    path: 'add-plant',
+    component: PlantFormComponent
+  }
+  //,
   // {
   //   path: '**',
   //   component: PageNotFoundComponent

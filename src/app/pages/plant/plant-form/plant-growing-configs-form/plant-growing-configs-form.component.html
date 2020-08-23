@@ -1,4 +1,4 @@
-<label>{{"FORM.SOIL_TYPE" | translate}}</label>
+<label>{{"FORM.SOIL_TYPE_LABEL" | translate}}</label>
 <mat-form-field appearance="outline">
   <mat-select [(ngModel)]="growingConfigs.soilType">
     <mat-option *ngFor="let val of soilType" [value]="val">
@@ -7,7 +7,7 @@
   </mat-select>
 </mat-form-field>
 
-<label>{{"FORM.SOIL_QUANTITY" | translate}}</label>
+<label>{{"FORM.SOIL_QUANTITY_LABEL" | translate}}</label>
 <mat-form-field appearance="outline">
   <input matInput type="number" [(ngModel)]="growingConfigs.soilQuantity">
   <span matSuffix>x</span>

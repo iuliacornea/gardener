@@ -7,19 +7,16 @@ mat-button-toggle-group {
   margin-top: 4px;
   margin-bottom: 16px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   border: none;
+  /* align-items: flex-start; */
 }
 
 mat-button-toggle {
-  white-space: nowrap;
-  position: relative;
-  width: 15%;
-  overflow: hidden;
-  margin-left: 4%;
+  width: 17%;
 }
 
 .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
-  border: none;
+border: none;
 }
+
