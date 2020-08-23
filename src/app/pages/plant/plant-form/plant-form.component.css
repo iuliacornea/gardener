@@ -6,13 +6,13 @@
 }
 
 .plant-form-column {
-  width: 600px;
+  width: 500px;
   display: flex;
   flex-flow: column;
 }
 
 .form-buttons {
-  width: 600px;
+  width: 500px;
   margin-top: 16px;
   display: flex;
   justify-content: flex-end;
