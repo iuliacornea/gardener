@@ -38,6 +38,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { PlantDetailsFormComponent } from './pages/plant/plant-form/plant-details-form/plant-details-form.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { GardenComponent } from './pages/garden/garden.component';
+import { PlantPageComponent } from './pages/plant/plant-page/plant-page.component';
+import { FeaturesPageComponent } from './pages/plant/features-page/features-page.component';
+import { GrowingConfigsPageComponent } from './pages/plant/growing-configs-page/growing-configs-page.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -61,7 +64,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     PlantGrowingConfigsFormComponent,
     PlantFormComponent,
     PlantDetailsFormComponent,
-    GardenComponent
+    GardenComponent,
+    PlantPageComponent,
+    FeaturesPageComponent,
+    GrowingConfigsPageComponent
   ],
   imports: [
     BrowserModule,

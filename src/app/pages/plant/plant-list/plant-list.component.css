@@ -2,20 +2,16 @@
   position: relative;
 }
 
+.add-button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
 .plant-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 32px;
-    margin-right: 32px;
-}
-
-.plant {
-    padding: 16px;
-}
-
-.add-button {
-  position: absolute;
-  top: 0;
-  right: 0;
+    justify-content: space-around;
+    padding-top: 80px;
 }

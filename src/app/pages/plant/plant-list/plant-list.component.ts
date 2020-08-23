@@ -15,11 +15,8 @@ export class PlantListComponent implements OnInit {
   ngOnInit(): void {
     this.plantTypeService.getPlants().subscribe( result =>
     {
-      alert('check console for result');
-      console.log(result);
+     this.plants = result;
     });
-    this.plants = (plantsFile as any).default;
-    console.log(this.plants);
   }
 
 }

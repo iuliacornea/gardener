@@ -5,15 +5,33 @@
   justify-content: space-around;
 }
 
-.plant-form-column {
-  width: 500px;
-  display: flex;
-  flex-flow: column;
+@media screen and (min-width: 980px) {
+  .plant-form-column {
+    width: 600px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .form-buttons {
+    width: 600px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
 }
 
-.form-buttons {
-  width: 500px;
-  margin-top: 16px;
-  display: flex;
-  justify-content: flex-end;
+@media screen and (max-width: 979px) {
+  .plant-form-column {
+    width: 500px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .form-buttons {
+    width: 500px;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }

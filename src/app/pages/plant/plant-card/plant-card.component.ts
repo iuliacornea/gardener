@@ -1,23 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {PlantsService, PlantTypeDto} from '@com.iulia/gardener-api';
 
 @Component({
   selector: 'gar-plant-card',
   templateUrl: './plant-card.component.html',
   styleUrls: ['./plant-card.component.css']
 })
-export class PlantCardComponent implements OnInit {
+export class PlantCardComponent {
 
   @Input()
-  plant: any
+  plant: PlantTypeDto;
 
-  displayDescription = true;
-
-  constructor() { }
-
-  ngOnInit(): void {
-    console.log(this.plant)
-    console.log(this.plant.name)
-
-  }
 
 }
