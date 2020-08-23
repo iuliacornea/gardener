@@ -1,0 +1,63 @@
+<label>{{"FORM.SOIL_TYPE" | translate}}</label>
+<mat-form-field appearance="outline">
+  <mat-select [(ngModel)]="growingConfigs.soilType">
+    <mat-option *ngFor="let val of soilType" [value]="val">
+      {{"FORM.SOIL_TYPE." + val | translate}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<label>{{"FORM.SOIL_QUANTITY" | translate}}</label>
+<mat-form-field appearance="outline">
+  <input matInput type="number" [(ngModel)]="growingConfigs.soilQuantity">
+  <span matSuffix>x</span>
+</mat-form-field>
+
+<label>{{"FORM.SOIL_HUMIDITY_SUMMER" | translate}}</label>
+<mat-button-toggle-group #soilHumiditySummer="matButtonToggleGroup" [(ngModel)]="growingConfigs.soilHumiditySummer">
+  <mat-button-toggle class="no-border" *ngFor="let val of fiveDegreeScale" value="{{val}}">
+    {{"FORM.SCALE." + val | translate}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<label>{{"FORM.SOIL_HUMIDITY_WINTER" | translate}}</label>
+<mat-button-toggle-group #soilHumidityWinter="matButtonToggleGroup" [(ngModel)]="growingConfigs.soilHumidityWinter">
+  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
+    {{"FORM.SCALE." + val | translate}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<label>{{"FORM.AIR_HUMIDITY" | translate}}</label>
+<mat-button-toggle-group #airHumidity="matButtonToggleGroup" [(ngModel)]="growingConfigs.airHumidity">
+  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
+    {{"FORM.SCALE." + val | translate}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<label>{{"FORM.AIR_TEMPERATURE_SUMMER" | translate}}</label>
+<mat-form-field appearance="outline">
+  <input matInput type="number" [(ngModel)]="growingConfigs.airTemperatureSummer">
+  <span matSuffix>°C</span>
+</mat-form-field>
+
+<label>{{"FORM.AIR_TEMPERATURE_WINTER" | translate}}</label>
+<mat-form-field appearance="outline">
+  <input matInput type="number" [(ngModel)]="growingConfigs.airTemperatureWinter">
+  <span matSuffix>°C</span>
+</mat-form-field>
+
+<label>{{"FORM.LIGHT_INTENSITY_SUMMER" | translate}}</label>
+<mat-button-toggle-group #lightIntensitySummer="matButtonToggleGroup" [(ngModel)]="growingConfigs.lightIntensitySummer">
+  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
+    {{"FORM.SCALE." + val | translate}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<label>{{"FORM.LIGHT_INTENSITY_WINTER" | translate}}</label>
+<mat-button-toggle-group #lightIntensityWinter="matButtonToggleGroup" [(ngModel)]="growingConfigs.lightIntensityWinter">
+  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
+    {{"FORM.SCALE." + val | translate}}
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+

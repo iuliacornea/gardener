@@ -1,0 +1,48 @@
+.plant-form {
+    display: flex;
+    flex-flow: column;
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+.section {
+    display: flex;
+    flex-flow: column;
+    margin-top: 16px;
+    margin-bottom: 16px;;
+}
+
+.section label {
+    margin-bottom: 8px;
+}
+
+mat-button-toggle-group {
+  margin-top: 4px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: none;
+}
+
+mat-button-toggle {
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  width: 40%;
+  margin-bottom: 5%;
+}
+
+.mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
+  border: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 12px;
+}
+
+p {
+  margin: 0;
+}

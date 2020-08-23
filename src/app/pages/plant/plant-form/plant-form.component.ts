@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-enum FormStructure {
-  QUESTIONAIRE = 'QUESTIONAIRE',
-  USER_CONFIG = 'USER_CONFIG'
-}
+import {Component, OnInit} from '@angular/core';
+import {FeaturesConfigurationDto, GrowingConfigurationDto, PlantsService, PlantTypeDto} from '@com.iulia/gardener-api';
 
 @Component({
   selector: 'gar-plant-form',
@@ -12,32 +8,28 @@ enum FormStructure {
 })
 export class PlantFormComponent implements OnInit {
 
-  questionaire = FormStructure.QUESTIONAIRE
-  userConfig = FormStructure.USER_CONFIG
+  plantDetails: PlantTypeDto = {
+    name: '',
+    featuresConfiguration: null,
+    growingConfiguration: null
+  };
+  featuresConfig: FeaturesConfigurationDto = {};
+  growingCofig: GrowingConfigurationDto = {};
 
-  plantTypes = ['HERBACEOUS', 'WOODY']
-
-  flowers = ['YES', 'NO']
-  flowerShapeTypes = ['REGULAR', 'IREGULAR']
-  flowerPetalTypes = ['UNITED', 'SEPARATED', 'FAN']
-  flowerPetalCounts = ['MULTUPLE_OF_THREE', 'FOUR_OR_FIVE']
-
-  leaves = ['YES', 'NO']
-  leafTypes = ['GRASSY', 'GLOSSY', 'HAIRY', 'FLESHY', 'NEEDLE']
-  leafBranchingPatternTypes = ['OPPOSITE', 'ALTERNATE', 'WHORLED', 'BASAL']
-  leafVineTypes = ['PARALEL', 'RETICULATE', 'NONE']
-
-  spikes = ['YES', 'NO']
-  spikeLocationTypes = ['LEAF', 'STEM', 'ALL_OVER']
-  
-  stems = ['YES', 'NO']
-  stemTypes = ['WOODY', 'FLESHY', 'WITH_AERIAL_ROOTS']
-
-
-
-  constructor() { } 
+  constructor(private plantsService: PlantsService) {
+  }
 
   ngOnInit(): void {
   }
 
+  toConsole() {
+    this.plantDetails.growingConfiguration = this.growingCofig;
+    this.plantDetails.featuresConfiguration = this.featuresConfig;
+    this.plantsService.postPlant(this.plantDetails).subscribe(response => {
+      console.log(response);
+    });
+    console.log(this.featuresConfig);
+    console.log(this.growingCofig);
+    console.log(this.plantDetails);
+  }
 }

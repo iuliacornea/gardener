@@ -1,159 +1,25 @@
 <div class="plant-form">
-  <div class="section">
-    <label>{{"FORM.CHOOSE_TYPE" | translate}}</label>
-    <mat-button-toggle-group #formStructureGroup="matButtonToggleGroup" class="fit-content">
-      <mat-button-toggle value="{{questionaire}}">
-        {{"FORM.QUESTIONAIRE" | translate}}
-      </mat-button-toggle>
-      <mat-button-toggle value="{{userConfig}}">
-        {{"FORM.USER_CONFIG" | translate}}
-      </mat-button-toggle>
-    </mat-button-toggle-group>
-  </div>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Details">
+      <gar-plant-details-form class="plant-form-column" [(value)]="plantDetails"></gar-plant-details-form>
+    </mat-tab>
+    <mat-tab label="Features">
+      <gar-plant-features-form class="plant-form-column" [(value)]="featuresConfig"></gar-plant-features-form>
+    </mat-tab>
+    <mat-tab label="Growing">
+      <gar-plant-growing-configs-form class="plant-form-column" [(value)]="growingCofig"></gar-plant-growing-configs-form>
+    </mat-tab>
+  </mat-tab-group>
 
-  <mat-divider></mat-divider>
 
-  <div *ngIf="formStructureGroup.value == 'USER_CONFIG'">
-    <div class="section">
-      <mat-form-field appearance="outline">
-        <mat-label>{{"FORM.WATERING_FREQUENCY" | translate}}</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
 
-    <div class="section">
-      <mat-form-field appearance="outline">
-        <mat-label>{{"FORM.WATERING_QUANTITY" | translate}}</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
-  </div>
 
-  <div *ngIf="formStructureGroup.value == 'QUESTIONAIRE'">
-    <div class="section">
-      <label>{{"FORM.PLANT_TYPES" | translate}}</label>
-      <mat-button-toggle-group #plantTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of plantTypes" value="{{val}}">
-          {{"FORM.PLANT_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
 
-    <mat-divider></mat-divider>
 
-    <div class="section">
-      <label>{{"FORM.FLOWERS" | translate}}</label>
-      <mat-button-toggle-group #flowerGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of flowers" value="{{val}}">
-          {{"FORM.FLOWER." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
 
-    <div class="section">
-      <label>{{"FORM.FLOWER_SHAPE_TYPES" | translate}}</label>
-      <mat-button-toggle-group #flowerShapeTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of flowerShapeTypes" value="{{val}}">
-          {{"FORM.FLOWER_SHAPE_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.FLOWER_PETAL_TYPES" | translate}}</label>
-      <mat-button-toggle-group #flowerPetalTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of flowerPetalTypes" value="{{val}}">
-          {{"FORM.FLOWER_PETAL_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.FLOWER_PETAL_COUNTS" | translate}}</label>
-      <mat-button-toggle-group #flowerPetalCountGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of flowerPetalCounts" value="{{val}}">
-          {{"FORM.FLOWER_PETAL_COUNT." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <div class="section">
-      <label>{{"FORM.LEAVES" | translate}}</label>
-      <mat-button-toggle-group #leafGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of leaves" value="{{val}}">
-          {{"FORM.LEAF." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.LEAF_TYPES" | translate}}</label>
-      <mat-button-toggle-group #leafTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of leafTypes" value="{{val}}">
-          {{"FORM.LEAF_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.LEAF_BRANCHING_PATTERN_TYPES" | translate}}</label>
-      <mat-button-toggle-group #leafBranchingPatternTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of leafBranchingPatternTypes" value="{{val}}">
-          {{"FORM.LEAF_BRANCHING_PATTERN_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.LEAF_VINE_TYPES" | translate}}</label>
-      <mat-button-toggle-group #leafVineTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of leafVineTypes" value="{{val}}">
-          {{"FORM.LEAF_VINE_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <div class="section">
-      <label>{{"FORM.SPIKES" | translate}}</label>
-      <mat-button-toggle-group #spikeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of spikes" value="{{val}}">
-          {{"FORM.SPIKE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.SPIKE_LOCATION_TYPES" | translate}}</label>
-      <mat-button-toggle-group #spikeLocationTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of spikeLocationTypes" value="{{val}}">
-          {{"FORM.SPIKE_LOCATION_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <div class="section">
-      <label>{{"FORM.STEMS" | translate}}</label>
-      <mat-button-toggle-group #stemsGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of stems" value="{{val}}">
-          {{"FORM.STEM." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-    <div class="section">
-      <label>{{"FORM.STEM_TYPES" | translate}}</label>
-      <mat-button-toggle-group #stemTypeGroup="matButtonToggleGroup" class="fit-content">
-        <mat-button-toggle *ngFor="let val of stemTypes" value="{{val}}">
-          {{"FORM.STEM_TYPE." + val | translate}}
-        </mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
-  </div>
 </div>
+
+<button (click)="toConsole()">To console</button>
+
+
+

@@ -1,37 +1,39 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { PlantCardComponent } from './pages/plant/plant-card/plant-card.component';
-import { PlantListComponent } from './pages/plant/plant-list/plant-list.component';
-import { PlantIdentificationComponent } from './pages/plant/plant-identification/plant-identification.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatCardModule } from '@angular/material/card';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThemeSwitcherComponent } from './header/theme-switcher/theme-switcher.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {HomeComponent} from './pages/home/home.component';
+import {AboutComponent} from './pages/about/about.component';
+import {PlantCardComponent} from './pages/plant/plant-card/plant-card.component';
+import {PlantListComponent} from './pages/plant/plant-list/plant-list.component';
+import {PlantIdentificationComponent} from './pages/plant/plant-identification/plant-identification.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ThemeSwitcherComponent} from './header/theme-switcher/theme-switcher.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {PlantIdentificationDialog} from './pages/plant/plant-identification/plant-identification.component';
-import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component';
+import {PlantFeaturesFormComponent} from './pages/plant/plant-features-form/plant-features-form.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component';
+import {GreenhouseDetailsComponent} from './pages/greenhouse/greenhouse-details/greenhouse-details.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BASE_PATH} from '@com.iulia/gardener-api';
-import {B} from '@angular/cdk/keycodes';
+import {ApiModule as GardenerModule} from '@com.iulia/gardener-api';
+import {PlantGrowingConfigsFormComponent} from './pages/plant/plant-growing-configs-form/plant-growing-configs-form.component';
+import { PlantFormComponent } from './pages/plant/plant-form/plant-form.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -50,8 +52,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     PlantIdentificationComponent,
     PlantIdentificationDialog,
     ThemeSwitcherComponent,
-    PlantFormComponent,
-    GreenhouseDetailsComponent
+    PlantFeaturesFormComponent,
+    GreenhouseDetailsComponent,
+    PlantGrowingConfigsFormComponent,
+    PlantFormComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +81,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GardenerModule
   ],
   entryComponents: [
     PlantIdentificationDialog
@@ -90,4 +95,5 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
