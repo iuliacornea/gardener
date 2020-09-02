@@ -1,39 +1,28 @@
 <mat-toolbar class="toolbar" [ngClass]="{ 'background-filled': !backgroundTransparent}" color="primary">
   <mat-toolbar-row class="toolbar-row">
-<!--    <div>-->
-<!--      <button mat-icon-button routerLink="/home">-->
-<!--        <mat-icon>home</mat-icon>-->
-<!--      </button>-->
-<!--      <button mat-button routerLink="/plant-list">-->
-<!--        {{ "HEADER.PLANT_LIST" | translate }}-->
-<!--      </button>-->
-<!--      <button mat-button routerLink="/plant-identification">-->
-<!--        {{ "HEADER.MY_PLANT" | translate }}-->
-<!--      </button>-->
-<!--      <button mat-button routerLink="/about-us">-->
-<!--        {{ "HEADER.ABOUT_US" | translate }}-->
-<!--      </button>-->
-<!--      <button mat-button routerLink="/greenhouse">-->
-<!--        {{ "HEADER.GREENHOUSE" | translate }}-->
-<!--      </button>-->
-<!--      <button mat-button routerLink="/garden">-->
-<!--        Garden-->
-<!--      </button>-->
-
-<!--    </div>-->
-    <div class="menu-option spacing"> Plants </div>
-    <div class="spacing">
-      <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
-        Login
-      </button>
-      <div *ngIf="!!getLogegdInUser()">
-        Logged in as: {{getLogegdInUser().username}}
-      </div>
-      <button *ngIf="!!getLogegdInUser()" mat-raised-button (click)="logout()">
-        Logout
-      </button>
-
-<!--      <gar-theme-switcher></gar-theme-switcher>-->
+    <div class="menu-group">
+      <ng-container *ngIf="!!getLogegdInUser()">
+        <mat-icon class="user-icon">account_circle</mat-icon>
+        <div class="menu-option">
+          {{getLogegdInUser().username}}
+        </div>
+      </ng-container>
     </div>
+
+    <div class="menu-group">
+      <div class="menu-option spacing" routerLink="/home" routerLinkActive="menu-option-active"> One pot gardener</div>
+      <div class="menu-option spacing" routerLink="/about-us" routerLinkActive="menu-option-active"> Our mission</div>
+      <div class="menu-option spacing" routerLink="/plant-list" routerLinkActive="menu-option-active"> Plants</div>
+      <div class="spacing">
+        <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
+          Login
+        </button>
+        <button *ngIf="!!getLogegdInUser()" mat-raised-button (click)="logout()" color="primary">
+          Logout
+        </button>
+      </div>
+    </div>
+
+
   </mat-toolbar-row>
 </mat-toolbar>

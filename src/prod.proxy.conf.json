@@ -1,0 +1,6 @@
+{
+  "/api" : {
+    "target": "http://gardener-backend.herokuapp.com",
+    "secure": false
+  }
+}

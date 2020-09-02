@@ -3,7 +3,6 @@
   background: transparent;
 }
 
-
 .background-filled {
   background-color: var(--primary);
   animation: fadeout 0.5s;
@@ -25,21 +24,42 @@
 
 .toolbar-row {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   background: transparent;
+}
+
+.menu-group {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .menu-option {
   cursor: pointer;
   color: var(--light-gray);
+  font-size: 17px;
+  padding-bottom: 2px;
+}
+
+.menu-option:hover {
+  border-bottom: var(--light-gray) solid 2px;
+  padding-bottom: 0;
+}
+
+.menu-option:focus {
+  outline: 0;
+}
+
+.menu-option-active {
+  border-bottom: var(--light-gray) solid 2px;
+  padding-bottom: 0;
 }
 
 .spacing {
   margin: 0 16px 0 16px;
 }
 
-.menu-option:hover {
-  border-bottom: var(--light-gray) solid 2px;
+.user-icon {
+  margin-top: 4px;
+  margin-right: 4px;
 }
-
 
