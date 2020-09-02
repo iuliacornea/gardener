@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {PlantsService, PlantTypeDto, SpecimenDto} from '@com.iulia/gardener-api';
+import {PlantsService, PlantTypeDto, SpecimenDto} from '@iuliacornea/gardener-api';
 
 @Component({
   selector: 'gar-plant-card',

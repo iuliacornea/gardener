@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {FiveDegreeScale, GrowingConfigurationDto, SoilType} from '@com.iulia/gardener-api';
+import {FiveDegreeScale, GrowingConfigurationDto, SoilType} from '@iuliacornea/gardener-api';
 
 @Component({
   selector: 'gar-plant-growing-configs-form',

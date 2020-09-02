@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as plantsFile from 'src/assets/plants.json';
-import {PlantsService} from '@com.iulia/gardener-api';
+import {PlantsService} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
 
 @Component({

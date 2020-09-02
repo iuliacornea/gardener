@@ -1,4 +1,4 @@
-import {UserDto} from '@com.iulia/gardener-api';
+import {UserDto} from '@iuliacornea/gardener-api';
 
 
 export class LocalStorageHelper {

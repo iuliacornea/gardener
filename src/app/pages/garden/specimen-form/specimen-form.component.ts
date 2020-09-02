@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {PlantsService, PlantTypeDto, SpecimenDto, SpecimensService} from '@com.iulia/gardener-api';
+import {PlantsService, PlantTypeDto, SpecimenDto, SpecimensService} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
 import {Router} from '@angular/router';
 

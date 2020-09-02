@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {PlantTypeDto} from '@com.iulia/gardener-api';
+import {PlantTypeDto} from '@iuliacornea/gardener-api';
 
 @Component({
   selector: 'gar-plant-details-form',

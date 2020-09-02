@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FeaturesConfigurationDto, GrowingConfigurationDto, PlantsService, PlantTypeDto} from '@com.iulia/gardener-api';
+import {FeaturesConfigurationDto, GrowingConfigurationDto, PlantsService, PlantTypeDto} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
 import {Router} from '@angular/router';
 

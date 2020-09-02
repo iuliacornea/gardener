@@ -8,11 +8,11 @@ import {
   LeafDivisionOfBlade,
   StemSpikes,
   StemType
-} from '@com.iulia/gardener-api';
-import {LeafArrangementOnTheStem} from '@com.iulia/gardener-api';
-import {LeafSurface} from '@com.iulia/gardener-api';
-import {LeafTexture} from '@com.iulia/gardener-api';
-import {LeafVeinType} from '@com.iulia/gardener-api';
+} from '@iuliacornea/gardener-api';
+import {LeafArrangementOnTheStem} from '@iuliacornea/gardener-api';
+import {LeafSurface} from '@iuliacornea/gardener-api';
+import {LeafTexture} from '@iuliacornea/gardener-api';
+import {LeafVeinType} from '@iuliacornea/gardener-api';
 import {FormControl} from '@angular/forms';
 
 @Component({
