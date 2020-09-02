@@ -1,0 +1,23 @@
+<label>Name</label>
+<mat-form-field appearance="outline">
+  <input matInput [(ngModel)]="specimen.name">
+</mat-form-field>
+
+<label>Season</label>
+<mat-form-field appearance="outline">
+  <input matInput [(ngModel)]="specimen.season">
+</mat-form-field>
+
+<label>Plant season</label>
+<mat-form-field appearance="outline">
+  <mat-select [(ngModel)]="specimen.plantType">
+    <mat-option *ngFor="let val of plantTypes" [value]="val">
+      {{val.name}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button (click)="onSave()">
+  Save
+</button>
+

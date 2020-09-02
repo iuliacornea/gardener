@@ -1,0 +1,17 @@
+.plant-list-container {
+  position: relative;
+}
+
+.add-button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 80px;
+}

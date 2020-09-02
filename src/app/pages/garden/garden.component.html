@@ -1,1 +1,10 @@
-<p>garden works!</p>
+<div class="plant-list-container">
+
+  <button mat-fab color="primary" routerLink="/specimen-form" class="add-button">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div class="plant-list">
+    <gar-plant-card *ngFor="let specimen of specimens" [specimen]="specimen" class="plant"></gar-plant-card>
+  </div>
+</div>
