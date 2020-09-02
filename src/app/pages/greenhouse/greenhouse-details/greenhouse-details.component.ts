@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { GreenhouseService } from 'src/app/pages/greenhouse/greenhouse.service'
+import {Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {GreenhouseService} from 'src/app/pages/greenhouse/greenhouse.service';
 
 type Mode = {
   type: string,
@@ -23,24 +23,25 @@ type Greenhouse = {
 })
 export class GreenhouseDetailsComponent implements OnInit {
 
-  greenhouse: Greenhouse
-  ipFormControl = new FormControl()
-  modeFormControl = new FormControl()
-  soilHumidityThrehsoldFormControl = new FormControl()
-  daysIntervalFormControl = new FormControl()
-  millilitersFormControl = new FormControl()
+  greenhouse: Greenhouse;
+  ipFormControl = new FormControl();
+  modeFormControl = new FormControl();
+  soilHumidityThrehsoldFormControl = new FormControl();
+  daysIntervalFormControl = new FormControl();
+  millilitersFormControl = new FormControl();
 
-  constructor(private service: GreenhouseService) { }
+  constructor(private service: GreenhouseService) {
+  }
 
   ngOnInit(): void {
     if (!!this.service.getGreenhouseIp) {
-      this.getGreenhouseDetails()
+      this.getGreenhouseDetails();
     }
   }
 
   onConnect(): void {
-    this.service.setGreenhouseIp(this.ipFormControl.value)
-    this.getGreenhouseDetails()
+    this.service.setGreenhouseIp(this.ipFormControl.value);
+    this.getGreenhouseDetails();
   }
 
   onSetModeControl(): void {
@@ -48,32 +49,32 @@ export class GreenhouseDetailsComponent implements OnInit {
       let mode = {
         type: 'MAINTAIN_SOIL_HUMIDITY',
         soilHumidity: this.soilHumidityThrehsoldFormControl.value
-      }
-      console.log(mode)
+      };
+      console.log(mode);
       this.service.postGreenhouseOperatingMode(mode).subscribe(response => {
-        this.greenhouse = response
-        console.log(this.greenhouse)
-      })
+        this.greenhouse = response;
+        console.log(this.greenhouse);
+      });
     }
     if (this.modeFormControl.value == 'WATER_REGULARY') {
       let mode = {
         type: 'WATER_REGULARY',
         days: this.daysIntervalFormControl.value,
         milliliters: this.millilitersFormControl.value
-      }
-      console.log(mode)
+      };
+      console.log(mode);
       this.service.postGreenhouseOperatingMode(mode).subscribe(response => {
-        this.greenhouse = response
-        console.log(this.greenhouse)
-      })
+        this.greenhouse = response;
+        console.log(this.greenhouse);
+      });
     }
   }
 
   getGreenhouseDetails() {
     this.service.getGreenhouseDetails().subscribe(response => {
-      this.greenhouse = response
-      console.log(response)
-    })
+      this.greenhouse = response;
+      console.log(response);
+    });
   }
 
 }

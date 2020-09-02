@@ -9,6 +9,8 @@ import {PlantFormComponent} from './pages/plant/plant-form/plant-form.component'
 import {LoginComponent} from './pages/login/login.component';
 import {GardenComponent} from './pages/garden/garden.component';
 import {SpecimenFormComponent} from './pages/garden/specimen-form/specimen-form.component';
+import {BASE_PATH as GARDEN_API_BASE_PATH} from '@iuliacornea/gardener-api';
+import { environment } from './../environments/environment';
 
 const routes: Routes = [
   {
@@ -56,6 +58,12 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    {
+      useValue: GARDEN_API_BASE_PATH,
+      provide: environment.gardenerBasePath
+    }
+  ]
 })
 export class AppRoutingModule { }

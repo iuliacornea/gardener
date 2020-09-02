@@ -7,10 +7,10 @@ import {Observable} from 'rxjs';
 })
 export class GreenhouseService {
 
-  private GREENHOUSE_IP_KEY = 'greenhouseIp';
-  private GET_DETAILS_URL = '/greenhouse_details.json';
-  private POST_MODE_URL = '/greenhouse_details_maintain_soil_humidity.json';
-  private greenhouseIp: string = localStorage.getItem(this.GREENHOUSE_IP_KEY);
+  GREENHOUSE_IP_KEY = 'greenhouseIp';
+  GET_DETAILS_URL = '/greenhouse_details.json';
+  POST_MODE_URL = '/greenhouse_details_maintain_soil_humidity.json';
+  greenhouseIp: string = localStorage.getItem(this.GREENHOUSE_IP_KEY);
 
   constructor(private http: HttpClient) {
   }

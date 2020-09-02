@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  gardenerBasePath: 'https://gardener-backend.herokuapp.com'
 };

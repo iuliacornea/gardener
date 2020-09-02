@@ -1,72 +1,72 @@
-<h1>{{"GREENHOUSE.TITLE" | translate}}</h1>
-<div *ngIf="!service.greenhouseIp" class="section">
-    <mat-form-field appearance="outline">
-        <mat-label>{{"GREENHOUSE.IP" | translate}}</mat-label>
-        <input matInput [formControl]="ipFormControl">
-    </mat-form-field>
-    <button mat-raised-button (click)="onConnect()">
-        {{"GREENHOUSE.CONNECT" | translate}}
-    </button>
-</div>
+<!--<h1>{{"GREENHOUSE.TITLE" | translate}}</h1>-->
+<!--<div *ngIf="!service.greenhouseIp" class="section">-->
+<!--    <mat-form-field appearance="outline">-->
+<!--        <mat-label>{{"GREENHOUSE.IP" | translate}}</mat-label>-->
+<!--        <input matInput [formControl]="ipFormControl">-->
+<!--    </mat-form-field>-->
+<!--    <button mat-raised-button (click)="onConnect()">-->
+<!--        {{"GREENHOUSE.CONNECT" | translate}}-->
+<!--    </button>-->
+<!--</div>-->
 
-<div *ngIf="!!service.greenhouseIp">
-    <label>{{"GREENHOUSE.IP" | translate}}:</label>
-    <p>{{service.greenhouseIp}}</p>
-    <button mat-raised-button (click)="service.greenhouseIp = ''; greenhouse = null">
-        {{"GREENHOUSE.RESET_CONNECTION" | translate}}
-    </button>
-</div>
+<!--<div *ngIf="!!service.greenhouseIp">-->
+<!--    <label>{{"GREENHOUSE.IP" | translate}}:</label>-->
+<!--    <p>{{service.greenhouseIp}}</p>-->
+<!--    <button mat-raised-button (click)="service.greenhouseIp = ''; greenhouse = null">-->
+<!--        {{"GREENHOUSE.RESET_CONNECTION" | translate}}-->
+<!--    </button>-->
+<!--</div>-->
 
-<div *ngIf="!!greenhouse">
-    <label>
-        {{"GRENNHOUSE.AIR_TEMPERATURE" | translate}}
-    </label>
-    <p>{{greenhouse.airTemperature}}</p>
-    <mat-divider></mat-divider>
-    <label>
-        {{"GRENNHOUSE.AIR_HUMIDITY" | translate}}
-    </label>
-    <p>{{greenhouse.airHumidity}}</p>
-    <mat-divider></mat-divider>
-    <label>
-        {{"GRENNHOUSE.SOIL_HUMIDITY" | translate}}
-    </label>
-    <p>{{greenhouse.soilHumidity}}</p>
+<!--<div *ngIf="!!greenhouse">-->
+<!--    <label>-->
+<!--        {{"GRENNHOUSE.AIR_TEMPERATURE" | translate}}-->
+<!--    </label>-->
+<!--    <p>{{greenhouse.airTemperature}}</p>-->
+<!--    <mat-divider></mat-divider>-->
+<!--    <label>-->
+<!--        {{"GRENNHOUSE.AIR_HUMIDITY" | translate}}-->
+<!--    </label>-->
+<!--    <p>{{greenhouse.airHumidity}}</p>-->
+<!--    <mat-divider></mat-divider>-->
+<!--    <label>-->
+<!--        {{"GRENNHOUSE.SOIL_HUMIDITY" | translate}}-->
+<!--    </label>-->
+<!--    <p>{{greenhouse.soilHumidity}}</p>-->
 
-    <label>
-        {{"GRENNHOUSE.MODE" | translate}}
-    </label>
-    <div *ngIf="!greenhouse.mode">
-        <p>{{"GRENNHOUSE.NO_MODE_SET" | translate}}</p>
-        <mat-form-field appearance="outline">
-            <mat-label>{{"GREENHOUSE.MODE" | translate}}</mat-label>
-            <input matInput [formControl]="modeFormControl">
-        </mat-form-field>
-        <div *ngIf="modeFormControl.value == 'MAINTAIN_SOIL_HUMIDITY'">
-            <mat-form-field appearance="outline">
-                <mat-label>{{"GREENHOUSE.SOIL_HUMIDITY_THRESHOLD" | translate}}</mat-label>
-                <input matInput [formControl]="soilHumidityThrehsoldFormControl">
-            </mat-form-field>
-        </div>
-        <div *ngIf="modeFormControl.value == 'WATER_REGULARY'">
-            <mat-form-field appearance="outline">
-                <mat-label>{{"GREENHOUSE.DAYS_INTERVAL" | translate}}</mat-label>
-                <input matInput [formControl]="daysIntervalFormControl">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>{{"GREENHOUSE.MILLILITERS" | translate}}</mat-label>
-                <input matInput [formControl]="millilitersFormControl">
-            </mat-form-field>
-        </div>
-        <button mat-raised-button (click)="onSetModeControl()">
-            {{"GRENNHOUSE.SET_MODE" | translate}}
-        </button>
-    </div>
-    <div *ngIf="!!greenhouse.mode">
-        <label>{{"GRENNHOUSE.MODE_TYPE" | translate}}</label>
-        <p>{{greenhouse.mode.type}}</p>
-        <mat-divider></mat-divider>
-        <label>{{"GRENNHOUSE.SOIL_HUMIDITY_THRESHOLD" | translate}}</label>
-        <p>{{greenhouse.mode.soilHumidity}}</p>
-    </div>
-</div>
+<!--    <label>-->
+<!--        {{"GRENNHOUSE.MODE" | translate}}-->
+<!--    </label>-->
+<!--    <div *ngIf="!greenhouse.mode">-->
+<!--        <p>{{"GRENNHOUSE.NO_MODE_SET" | translate}}</p>-->
+<!--        <mat-form-field appearance="outline">-->
+<!--            <mat-label>{{"GREENHOUSE.MODE" | translate}}</mat-label>-->
+<!--            <input matInput [formControl]="modeFormControl">-->
+<!--        </mat-form-field>-->
+<!--        <div *ngIf="modeFormControl.value == 'MAINTAIN_SOIL_HUMIDITY'">-->
+<!--            <mat-form-field appearance="outline">-->
+<!--                <mat-label>{{"GREENHOUSE.SOIL_HUMIDITY_THRESHOLD" | translate}}</mat-label>-->
+<!--                <input matInput [formControl]="soilHumidityThrehsoldFormControl">-->
+<!--            </mat-form-field>-->
+<!--        </div>-->
+<!--        <div *ngIf="modeFormControl.value == 'WATER_REGULARY'">-->
+<!--            <mat-form-field appearance="outline">-->
+<!--                <mat-label>{{"GREENHOUSE.DAYS_INTERVAL" | translate}}</mat-label>-->
+<!--                <input matInput [formControl]="daysIntervalFormControl">-->
+<!--            </mat-form-field>-->
+<!--            <mat-form-field appearance="outline">-->
+<!--                <mat-label>{{"GREENHOUSE.MILLILITERS" | translate}}</mat-label>-->
+<!--                <input matInput [formControl]="millilitersFormControl">-->
+<!--            </mat-form-field>-->
+<!--        </div>-->
+<!--        <button mat-raised-button (click)="onSetModeControl()">-->
+<!--            {{"GRENNHOUSE.SET_MODE" | translate}}-->
+<!--        </button>-->
+<!--    </div>-->
+<!--    <div *ngIf="!!greenhouse.mode">-->
+<!--        <label>{{"GRENNHOUSE.MODE_TYPE" | translate}}</label>-->
+<!--        <p>{{greenhouse.mode.type}}</p>-->
+<!--        <mat-divider></mat-divider>-->
+<!--        <label>{{"GRENNHOUSE.SOIL_HUMIDITY_THRESHOLD" | translate}}</label>-->
+<!--        <p>{{greenhouse.mode.soilHumidity}}</p>-->
+<!--    </div>-->
+<!--</div>-->
