@@ -1,4 +1,45 @@
-.menu {
-    display: flex;
-    justify-content: space-between;
+.toolbar {
+  position: fixed;
+  background: transparent;
 }
+
+
+.background-filled {
+  background-color: var(--primary);
+  animation: fadeout 0.5s;
+}
+
+.background-filled button {
+  background-color: var(--light-gray);
+  color: var(--very-dark-green);
+}
+
+@keyframes fadeout {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--primary);
+  }
+}
+
+.toolbar-row {
+  display: flex;
+  justify-content: flex-end;
+  background: transparent;
+}
+
+.menu-option {
+  cursor: pointer;
+  color: var(--light-gray);
+}
+
+.spacing {
+  margin: 0 16px 0 16px;
+}
+
+.menu-option:hover {
+  border-bottom: var(--light-gray) solid 2px;
+}
+
+

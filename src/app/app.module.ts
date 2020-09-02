@@ -41,6 +41,8 @@ import { GardenComponent } from './pages/garden/garden.component';
 import { PlantPageComponent } from './pages/plant/plant-page/plant-page.component';
 import { FeaturesPageComponent } from './pages/plant/features-page/features-page.component';
 import { GrowingConfigsPageComponent } from './pages/plant/growing-configs-page/growing-configs-page.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SpecimenFormComponent } from './pages/garden/specimen-form/specimen-form.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -67,7 +69,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     GardenComponent,
     PlantPageComponent,
     FeaturesPageComponent,
-    GrowingConfigsPageComponent
+    GrowingConfigsPageComponent,
+    LoginComponent,
+    SpecimenFormComponent
   ],
   imports: [
     BrowserModule,

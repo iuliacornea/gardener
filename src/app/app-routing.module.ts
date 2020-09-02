@@ -6,6 +6,9 @@ import { AboutComponent } from './pages/about/about.component';
 import { PlantIdentificationComponent } from './pages/plant/plant-identification/plant-identification.component';
 import { GreenhouseDetailsComponent } from './pages/greenhouse/greenhouse-details/greenhouse-details.component';
 import {PlantFormComponent} from './pages/plant/plant-form/plant-form.component';
+import {LoginComponent} from './pages/login/login.component';
+import {GardenComponent} from './pages/garden/garden.component';
+import {SpecimenFormComponent} from './pages/garden/specimen-form/specimen-form.component';
 
 const routes: Routes = [
   {
@@ -31,6 +34,18 @@ const routes: Routes = [
   {
     path: 'add-plant',
     component: PlantFormComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'garden',
+    component: GardenComponent
+  },
+  {
+    path: 'specimen-form',
+    component: SpecimenFormComponent
   }
   //,
   // {

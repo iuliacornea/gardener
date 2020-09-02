@@ -1,24 +1,39 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row class="menu">
-    <div>
-      <button mat-icon-button routerLink="/home">
-        <mat-icon>home</mat-icon>
+<mat-toolbar class="toolbar" [ngClass]="{ 'background-filled': !backgroundTransparent}" color="primary">
+  <mat-toolbar-row class="toolbar-row">
+<!--    <div>-->
+<!--      <button mat-icon-button routerLink="/home">-->
+<!--        <mat-icon>home</mat-icon>-->
+<!--      </button>-->
+<!--      <button mat-button routerLink="/plant-list">-->
+<!--        {{ "HEADER.PLANT_LIST" | translate }}-->
+<!--      </button>-->
+<!--      <button mat-button routerLink="/plant-identification">-->
+<!--        {{ "HEADER.MY_PLANT" | translate }}-->
+<!--      </button>-->
+<!--      <button mat-button routerLink="/about-us">-->
+<!--        {{ "HEADER.ABOUT_US" | translate }}-->
+<!--      </button>-->
+<!--      <button mat-button routerLink="/greenhouse">-->
+<!--        {{ "HEADER.GREENHOUSE" | translate }}-->
+<!--      </button>-->
+<!--      <button mat-button routerLink="/garden">-->
+<!--        Garden-->
+<!--      </button>-->
+
+<!--    </div>-->
+    <div class="menu-option spacing"> Plants </div>
+    <div class="spacing">
+      <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
+        Login
       </button>
-      <button mat-button routerLink="/plant-list">
-        {{ "HEADER.PLANT_LIST" | translate }}
+      <div *ngIf="!!getLogegdInUser()">
+        Logged in as: {{getLogegdInUser().username}}
+      </div>
+      <button *ngIf="!!getLogegdInUser()" mat-raised-button (click)="logout()">
+        Logout
       </button>
-      <button mat-button routerLink="/plant-identification">
-        {{ "HEADER.MY_PLANT" | translate }}
-      </button>
-      <button mat-button routerLink="/about-us">
-        {{ "HEADER.ABOUT_US" | translate }}
-      </button>
-      <button mat-button routerLink="/greenhouse">
-        {{ "HEADER.GREENHOUSE" | translate }}
-      </button>
-    </div>
-    <div>
-      <gar-theme-switcher></gar-theme-switcher>
+
+<!--      <gar-theme-switcher></gar-theme-switcher>-->
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

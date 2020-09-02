@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+:root {
+  --light-gray: #EDEDE8;
+  --light-green: #8fbc8f;
+  --medium-green: rgb(109, 141, 121);
+  --dark-green: rgb(85, 108, 114);
+  --very-dark-green: #1E231A;
+  --dark-red: #cd5334;
+  --light-yeloow: #F1CAA7;
+  --accent: var(--dark-red);
+  --warn: var(--light-yeloow);
+  --primary: var(--medium-green);
+  --exWhite: var(--light-gray);
+}

@@ -1,11 +1,24 @@
 .card {
-    width: 300px;
+  width: 300px;
+  margin-bottom: 40px;
+  margin-right: 24px;
+  margin-left: 24px;
 }
+
 .card-image {
-    height: 240px;
+  height: 240px;
   object-fit: cover;
 }
+
 .mat-card-content {
-  height: 100px;
+  min-height: 100px;
   overflow: hidden;
+}
+
+.stat {
+  border: solid 2px;
+  border-color: var(--main-bg-color);
+  border-radius: 5px;
+  height: 24px;
+  margin-bottom: 8px;
 }

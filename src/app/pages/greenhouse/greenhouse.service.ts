@@ -1,37 +1,38 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GreenhouseService {
 
-  private GREENHOUSE_IP_KEY = 'greenhouseIp'
-  private GET_DETAILS_URL = '/greenhouse_details.json'
-  private POST_MODE_URL = '/greenhouse_details_maintain_soil_humidity.json'
-  private greenhouseIp: string = localStorage.getItem(this.GREENHOUSE_IP_KEY)
+  private GREENHOUSE_IP_KEY = 'greenhouseIp';
+  private GET_DETAILS_URL = '/greenhouse_details.json';
+  private POST_MODE_URL = '/greenhouse_details_maintain_soil_humidity.json';
+  private greenhouseIp: string = localStorage.getItem(this.GREENHOUSE_IP_KEY);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   getGreenhouseDetails(): Observable<any> {
     return this.greenhouseIp && this.http.get(
-      this.greenhouseIp + this.GET_DETAILS_URL, { responseType: 'json'})
+      this.greenhouseIp + this.GET_DETAILS_URL, {responseType: 'json'});
   }
 
   postGreenhouseOperatingMode(body: any): Observable<any> {
     // return this.greenhouseIp && this.http.post(
     //   this.greenhouseIp + this.POST_MODE_URL, body, { responseType: 'json'})
     return this.greenhouseIp && this.http.get(
-      this.greenhouseIp + this.POST_MODE_URL, { responseType: 'json'})
+      this.greenhouseIp + this.POST_MODE_URL, {responseType: 'json'});
   }
 
   getGreenhouseIp() {
-    return this.greenhouseIp
+    return this.greenhouseIp;
   }
 
   setGreenhouseIp(newIp: string) {
-    localStorage.setItem(this.GREENHOUSE_IP_KEY, newIp)
-    this.greenhouseIp = localStorage.getItem(this.GREENHOUSE_IP_KEY)
+    localStorage.setItem(this.GREENHOUSE_IP_KEY, newIp);
+    this.greenhouseIp = localStorage.getItem(this.GREENHOUSE_IP_KEY);
   }
 }

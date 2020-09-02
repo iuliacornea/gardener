@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as plantsFile from 'src/assets/plants.json';
 import {PlantsService} from '@com.iulia/gardener-api';
+import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
 
 @Component({
   selector: 'gar-plant-list',
@@ -13,7 +14,7 @@ export class PlantListComponent implements OnInit {
   constructor(private plantTypeService: PlantsService) { }
 
   ngOnInit(): void {
-    this.plantTypeService.getPlants().subscribe( result =>
+    this.plantTypeService.getPlants(LocalStorageHelper.retrieveUser().token).subscribe( result =>
     {
      this.plants = result;
     });

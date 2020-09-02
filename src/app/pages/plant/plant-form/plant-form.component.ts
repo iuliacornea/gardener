@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FeaturesConfigurationDto, GrowingConfigurationDto, PlantsService, PlantTypeDto} from '@com.iulia/gardener-api';
+import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'gar-plant-form',
@@ -16,17 +18,19 @@ export class PlantFormComponent implements OnInit {
   featuresConfig: FeaturesConfigurationDto = {};
   growingCofig: GrowingConfigurationDto = {};
 
-  constructor(private plantsService: PlantsService) {
+  constructor(private plantsService: PlantsService, private router: Router) {
   }
 
   ngOnInit(): void {
   }
 
-  toConsole() {
+  toConsole(): void {
     this.plantDetails.growingConfiguration = this.growingCofig;
     this.plantDetails.featuresConfiguration = this.featuresConfig;
-    this.plantsService.postPlant(this.plantDetails).subscribe(response => {
+    this.plantDetails.userId = LocalStorageHelper.retrieveUser().id;
+    this.plantsService.postPlant(LocalStorageHelper.retrieveUser().token, this.plantDetails).subscribe(response => {
       console.log(response);
+      this.router.navigate(['plant-list']);
     });
     console.log(this.featuresConfig);
     console.log(this.growingCofig);
