@@ -1,14 +1,77 @@
-.content {
+.home {
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=2560&height=1707%202560w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=1920&height=1280%201920w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=1600&height=1067%201600w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=1440&height=960%201440w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=1280&height=854%201280w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=1024&height=683%201024w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=800&height=533%20800w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=640&height=427%20640w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=480&height=320%20480w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=320&height=213%20320w,%20https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg?format=pjpg&quality=80&auto=webp&disable=upscale&width=160&height=107%20160w');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://jimdo-storage.freetls.fastly.net/image/37e0d084-cd97-4868-81bf-4a260ea18679.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
 }
 
 .quote {
   color: var(--primary);
+  max-width: 800px;
+}
+
+h1 {
+  font: 700 48px/80px News Cycle, sans-serif;
+}
+
+h3 {
+  font: 400 28px/64px News Cycle, sans-serif;
+}
+
+.quote p {
+  color: var(--exWhite);
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Catamaran,sans-serif;
+}
+
+.quote button {
+  margin-top: 40px;
+}
+
+.plants-preview {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.plant-example {
+  margin: 0 20px 80px 20px;
+  width: 350px;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.about-us {
+  height: 500px;
+  background-color: var(--dark-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  width: 500px;
+  height: 200px;
+  border: 3px solid var(--exWhite);
+  padding: 40px 80px 20px 80px;
+  color: var(--exWhite);
+  text-align: center;
+}
+
+.rectangle p {
+  color: var(--exWhite);
+  font-size: 18px;
+  line-height: 30px;
+  font-family: Catamaran,sans-serif;
 }

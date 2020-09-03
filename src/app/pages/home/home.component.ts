@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {PlantTypeDto} from '@iuliacornea/gardener-api';
 
 @Component({
   selector: 'gar-home',
@@ -7,7 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  exemplePlantTypes: PlantTypeDto[] = [
+    {
+      name: 'Monstera',
+      image: '',
+      featuresConfiguration: null,
+      growingConfiguration: null
+    },
+    {
+      name: 'Aloe vera',
+      image: '',
+      featuresConfiguration: null,
+      growingConfiguration: null
+    },
+    {
+      name: 'Aloe vera',
+      image: '',
+      featuresConfiguration: null,
+      growingConfiguration: null
+    }];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

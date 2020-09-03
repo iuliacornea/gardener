@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import * as plantsFile from 'src/assets/plants.json';
 import {PlantsService} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
@@ -10,6 +10,7 @@ import {LocalStorageHelper} from '../../../services/LocalStorageHelper';
 })
 export class PlantListComponent implements OnInit {
 
+  @Input()
   plants = [];
   constructor(private plantTypeService: PlantsService) { }
 

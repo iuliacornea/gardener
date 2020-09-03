@@ -1,3 +1,7 @@
+mat-toolbar {
+  z-index: 1;
+}
+
 .toolbar {
   position: fixed;
   background: transparent;
@@ -9,7 +13,7 @@
 }
 
 .background-filled button {
-  background-color: var(--light-gray);
+  background-color: var(--exWhite);
   color: var(--very-dark-green);
 }
 
@@ -35,13 +39,13 @@
 
 .menu-option {
   cursor: pointer;
-  color: var(--light-gray);
+  color: var(--exWhite);
   font-size: 17px;
   padding-bottom: 2px;
 }
 
 .menu-option:hover {
-  border-bottom: var(--light-gray) solid 2px;
+  border-bottom: var(--exWhite) solid 2px;
   padding-bottom: 0;
 }
 
@@ -50,7 +54,7 @@
 }
 
 .menu-option-active {
-  border-bottom: var(--light-gray) solid 2px;
+  border-bottom: var(--exWhite) solid 2px;
   padding-bottom: 0;
 }
 

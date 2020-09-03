@@ -97,7 +97,7 @@
 .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 14px;
-  font-weight: 500
+  font-weight: 200
 }
 
 .mat-button-toggle {
