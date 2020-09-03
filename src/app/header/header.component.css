@@ -7,6 +7,11 @@ mat-toolbar {
   background: transparent;
 }
 
+.background-transparent {
+  background: transparent;
+  animation: fadein 0.5s;
+}
+
 .background-filled {
   background-color: var(--primary);
   animation: fadeout 0.5s;
@@ -23,6 +28,15 @@ mat-toolbar {
   }
   to {
     background-color: var(--primary);
+  }
+}
+
+@keyframes fadein {
+  from {
+    background-color: var(--primary);
+  }
+  to {
+    background-color: transparent;
   }
 }
 

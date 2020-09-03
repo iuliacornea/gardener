@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar" [ngClass]="{ 'background-filled': !backgroundTransparent}" color="primary">
+<mat-toolbar class="toolbar" [ngClass]="{ 'background-filled': !backgroundTransparent, 'background-transparent': backgroundTransparent}" color="primary">
   <mat-toolbar-row class="toolbar-row">
     <div class="menu-group">
       <ng-container *ngIf="!!getLogegdInUser()">
