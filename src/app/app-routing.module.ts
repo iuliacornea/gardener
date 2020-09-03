@@ -62,7 +62,7 @@ const routes: Routes = [
   providers: [
     {
       useValue: GARDEN_API_BASE_PATH,
-      provide: environment.gardenerBasePath
+      provide: '.'
     }
   ]
 })

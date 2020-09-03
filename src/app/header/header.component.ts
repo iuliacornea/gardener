@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserDto} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../services/LocalStorageHelper';
-import {Router} from '@angular/router';
+import {ActivatedRoute, ActivatedRouteSnapshot, ResolveEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'gar-header',
@@ -11,13 +11,28 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   expandMenu = false;
-  backgroundTransparent = true;
+  backgroundTransparent = false;
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
-    window.addEventListener('scroll', () => this.setToolbarBackgroundTransparent());
+    this.router.events.subscribe(event => {
+      if (event instanceof ResolveEnd) {
+        if (event.url === '/home') {
+          this.backgroundTransparent = true;
+        } else {
+          this.backgroundTransparent = false;
+        }
+      }
+    });
+    window.addEventListener('scroll', () => {
+      if (this.router.isActive('/home', true)) {
+        this.setToolbarBackgroundTransparent();
+      } else {
+        this.backgroundTransparent = false;
+      }
+    });
   }
 
   switchTheme(): void {
