@@ -45,6 +45,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SpecimenFormComponent } from './pages/garden/specimen-form/specimen-form.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { GardenerCardComponent } from './pages/garden/gardener-card/gardener-card.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -73,7 +74,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     FeaturesPageComponent,
     GrowingConfigsPageComponent,
     LoginComponent,
-    SpecimenFormComponent
+    SpecimenFormComponent,
+    GardenerCardComponent
   ],
   imports: [
     BrowserModule,

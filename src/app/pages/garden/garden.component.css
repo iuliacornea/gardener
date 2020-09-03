@@ -1,12 +1,15 @@
 .container {
+  margin-top: 64px;
   min-height: 100vh;
+  padding-left: 60px;
   background-color: var(--light-gray);
 }
 
 .gardeners-list {
   margin-top: 60px;
-  height: 400px;
-  background-color: var(--);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .add-button {
   position: absolute;
