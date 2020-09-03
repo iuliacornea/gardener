@@ -23,7 +23,7 @@ h3 {
   font: 400 28px/64px News Cycle, sans-serif;
 }
 
-.quote p {
+.quote p, .plants p {
   color: var(--exWhite);
   font-size: 18px;
   line-height: 30px;
@@ -34,12 +34,12 @@ h3 {
   margin-top: 40px;
 }
 
-.plants-preview {
+.testimonials {
   display: flex;
   flex-flow: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 .plant-example {
@@ -61,8 +61,8 @@ img {
 }
 
 .rectangle {
-  width: 500px;
-  height: 200px;
+  width: 40%;
+  min-height: 200px;
   border: 3px solid var(--exWhite);
   padding: 40px 80px 20px 80px;
   color: var(--exWhite);
@@ -74,4 +74,27 @@ img {
   font-size: 18px;
   line-height: 30px;
   font-family: Catamaran,sans-serif;
+}
+
+
+.plants {
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://jimdo-storage.freetls.fastly.net/image/35b59a88-e58d-40c2-81ad-c3b1ef1f22a8.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.plants-content {
+  margin-top: 40px;
+  max-width: 40%;
+}
+
+.plants h3 {
+  font: 600 40px/64px News Cycle, sans-serif;
+  color: var(--primary);
 }

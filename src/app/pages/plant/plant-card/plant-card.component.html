@@ -1,15 +1,15 @@
-<mat-card *ngIf="!!plant" class="card">
-  <mat-card-header>
-    <mat-card-title>{{plant.name}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="{{plant.image}}" class="card-image">
-  <mat-card-content>
-    <p>
-      {{plant.description}}
-      {{plant.image}}
-    </p>
-  </mat-card-content>
-</mat-card>
+<!--<mat-card *ngIf="!!plant" class="card">-->
+<!--  <mat-card-header>-->
+<!--    <mat-card-title>{{plant.name}}</mat-card-title>-->
+<!--  </mat-card-header>-->
+<!--  <img mat-card-image src="{{plant.image}}" class="card-image">-->
+<!--  <mat-card-content>-->
+<!--    <p>-->
+<!--      {{plant.description}}-->
+<!--      {{plant.image}}-->
+<!--    </p>-->
+<!--  </mat-card-content>-->
+<!--</mat-card>-->
 
 <mat-card *ngIf="!!specimen" class="card">
   <mat-card-header>
@@ -39,3 +39,47 @@
     </div>
   </mat-card-content>
 </mat-card>
+
+
+<div *ngIf="!!plant" class="plant-example">
+  <img src="{{plant.image}}">
+  <h3>{{plant.name}}</h3>
+  <div class="description">{{plant.description}}</div>
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Requirements
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="requirements">
+        <mat-divider class="pb-10"></mat-divider>
+        <div class="requirements-row">
+          <mat-icon>wb_sunny</mat-icon>
+          <div class="requirements-info"> Luminosity should be around {{plant.growingConfiguration?.lightIntensitySummer}} lux in summer
+            and {{plant.growingConfiguration?.lightIntensitySummer}} lux in winter.</div>
+        </div>
+        <div class="requirements-row">
+          <mat-icon>home</mat-icon>
+          <div class="requirements-info"> Temperature should be around {{plant.growingConfiguration?.airTemperatureSummer}} °C in summer
+            and {{plant.growingConfiguration?.airTemperatureWinter}} °C in winter.</div>
+        </div>
+        <div class="requirements-row">
+          <mat-icon>cloud</mat-icon>
+          <div class="requirements-info"> Air humidity should be around {{plant.growingConfiguration?.airHumidity}} %.</div>
+        </div>
+        <div class="requirements-row">
+          <mat-icon>opacity</mat-icon>
+          <div class="requirements-info"> Soil humidity should be around {{plant.growingConfiguration?.soilHumiditySummer}} % in summer
+            and {{plant.growingConfiguration?.soilHumidityWinter}} % in winter.</div>
+        </div>
+        <div class="requirements-row">
+          <mat-icon>hourglass_bottom</mat-icon>
+          <div class="requirements-info">Water regularly every 7 days in summer and every 14 days in winter.</div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+</div>

@@ -1,7 +1,13 @@
-.plant-list-container {
-  position: relative;
+.container {
+  min-height: 100vh;
+  background-color: var(--light-gray);
 }
 
+.gardeners-list {
+  margin-top: 60px;
+  height: 400px;
+  background-color: var(--);
+}
 .add-button {
   position: absolute;
   z-index: 1;

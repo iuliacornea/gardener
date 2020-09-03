@@ -21,4 +21,8 @@ export class PlantListComponent implements OnInit {
     });
   }
 
+  userLoggedIn(): boolean {
+    return !!LocalStorageHelper.retrieveUser();
+  }
+
 }

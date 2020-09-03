@@ -1,5 +1,40 @@
-<mat-toolbar class="toolbar" [ngClass]="{ 'background-filled': !backgroundTransparent, 'background-transparent': backgroundTransparent}" color="primary">
-  <mat-toolbar-row class="toolbar-row">
+<mat-toolbar class="toolbar"
+             [ngClass]="{ 'background-filled': !backgroundTransparent, 'background-transparent': backgroundTransparent}"
+             color="primary">
+  <mat-toolbar-row fxShow.xs="false" fxShow="true" class="toolbar-row">
+    <div class="menu-group">
+      <div class="menu-option spacing" routerLink="/home"
+           [ngClass]="{'menu-option-active': activeMenu === 'home'}"
+           (click)="scrollSmooth('home')"> One pot gardener</div>
+    </div>
+
+    <div class="menu-group">
+
+      <div class="menu-option spacing" routerLink="/home"
+           [ngClass]="{'menu-option-active': activeMenu === 'testimonials'}"
+           (click)="scrollSmooth('testimonials')">
+        Testimonials
+      </div>
+      <div class="menu-option spacing" routerLink="/home"
+           [ngClass]="{'menu-option-active': activeMenu === 'about-us'}"
+           (click)="scrollSmooth('about-us')">
+        About us
+      </div>
+      <div class="menu-option spacing" routerLink="/plant-list" routerLinkActive="menu-option-active"> Plants</div>
+      <div class="spacing">
+        <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
+          Login
+        </button>
+      </div>
+      <div class="spacing" *ngIf="!!getLogegdInUser()">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a bookmark icon" routerLink="/garden">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+      </div>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row fxShow.xs="true" fxShow="false" class="toolbar-row">
     <div class="menu-group">
       <ng-container *ngIf="!!getLogegdInUser()">
         <mat-icon class="user-icon">account_circle</mat-icon>
@@ -10,9 +45,7 @@
     </div>
 
     <div class="menu-group">
-      <div class="menu-option spacing" routerLink="/home" routerLinkActive="menu-option-active"> One pot gardener</div>
-      <div class="menu-option spacing" routerLink="/about-us" routerLinkActive="menu-option-active"> Our mission</div>
-      <div class="menu-option spacing" routerLink="/plant-list" routerLinkActive="menu-option-active"> Plants</div>
+
       <div class="spacing">
         <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
           Login
@@ -22,7 +55,10 @@
         </button>
       </div>
     </div>
-
-
+  </mat-toolbar-row>
+  <mat-toolbar-row fxShow.xs="true" fxShow="false" class="toolbar-row">
+    <div class="menu-option spacing" routerLink="/home" routerLinkActive="menu-option-active"> One pot gardener</div>
+    <div class="menu-option spacing" routerLink="/about-us" routerLinkActive="menu-option-active"> Our mission</div>
+    <div class="menu-option spacing" routerLink="/plant-list" routerLinkActive="menu-option-active"> Plants</div>
   </mat-toolbar-row>
 </mat-toolbar>

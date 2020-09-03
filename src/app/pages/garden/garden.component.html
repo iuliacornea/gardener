@@ -1,10 +1,25 @@
-<div class="plant-list-container">
+<div class="container">
 
-  <button mat-fab color="primary" routerLink="/specimen-form" class="add-button">
-    <mat-icon>add</mat-icon>
-  </button>
+  <div class="gardeners-list">
+    <h1>My gardeners</h1>
 
-  <div class="plant-list">
-    <gar-plant-card *ngFor="let specimen of specimens" [specimen]="specimen" class="plant"></gar-plant-card>
+    <div class="gardener">
+      <h3>
+        Iulia
+      </h3>
+      <p>First and formost, you are your own gardener</p>
+    </div>
+
   </div>
+
+  <div class="plants">
+    <button mat-fab color="primary" routerLink="/specimen-form" class="add-button">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <div class="plant-list">
+      <gar-plant-card *ngFor="let specimen of specimens" [specimen]="specimen" class="plant"></gar-plant-card>
+    </div>
+  </div>
+
 </div>

@@ -11,7 +11,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   --very-dark-green: #1E231A;
   --dark-red: #cd5334;
   --light-yeloow: #F1CAA7;
-  --accent: var(--dark-red);
+  --accent: black;
   --warn: var(--light-yeloow);
   --primary: var(--medium-green);
   --exWhite: white;

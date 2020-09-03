@@ -22,3 +22,61 @@
   height: 24px;
   margin-bottom: 8px;
 }
+
+.plant-example {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0 20px 80px 20px;
+  width: 300px;
+  overflow: hidden;
+  color: var(--exWhite);
+}
+
+.plant-example h3 {
+  font-family: News Cycle, sans-serif;
+  font-size: 20px;
+}
+
+img {
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.description {
+  height: 80px;
+  overflow: hidden;
+}
+
+.requirements {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.requirements-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.requirements-info {
+  margin-left: 15px;
+}
+
+button {
+  margin-top: 10px;
+  width: 120px;
+}
+
+mat-expansion-panel-header, mat-expansion-panel-header.mat-expanded {
+  height: 40px;
+}

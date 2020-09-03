@@ -43,6 +43,8 @@ import { FeaturesPageComponent } from './pages/plant/features-page/features-page
 import { GrowingConfigsPageComponent } from './pages/plant/growing-configs-page/growing-configs-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SpecimenFormComponent } from './pages/garden/specimen-form/specimen-form.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -100,7 +102,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ReactiveFormsModule,
     GardenerModule,
     MatSelectModule,
-    MatTabsModule
+    MatTabsModule,
+    FlexLayoutModule,
+    MatExpansionModule
   ],
   entryComponents: [
     PlantIdentificationDialog

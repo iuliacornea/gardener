@@ -1,10 +1,13 @@
 <div class="plant-list-container">
 
-  <button mat-fab color="primary" routerLink="/add-plant" class="add-button">
+  <button *ngIf="userLoggedIn()" mat-fab color="primary" routerLink="/add-plant"
+          [ngClass.xs]="'add-button-xs'"
+          class="add-button">
     <mat-icon>add</mat-icon>
   </button>
 
   <div class="plant-list">
+    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
     <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
   </div>
 </div>

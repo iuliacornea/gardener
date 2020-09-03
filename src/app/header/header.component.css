@@ -78,6 +78,10 @@ mat-toolbar {
 
 .user-icon {
   margin-top: 4px;
-  margin-right: 4px;
+  margin-right: 10px;
+}
+
+.pr-32 {
+  padding-right: 32px;
 }
 

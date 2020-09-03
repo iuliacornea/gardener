@@ -8,11 +8,17 @@ import {PlantsService, PlantTypeDto, SpecimenDto} from '@iuliacornea/gardener-ap
 })
 export class PlantCardComponent {
 
+  displayRequirements = false;
+
   @Input()
   plant: PlantTypeDto;
 
   @Input()
   specimen: SpecimenDto;
+
+  toggleRequirements(): void {
+    this.displayRequirements = !this.displayRequirements;
+  }
 
 
 }
