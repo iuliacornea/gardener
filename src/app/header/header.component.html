@@ -1,15 +1,18 @@
 <mat-toolbar class="toolbar"
-             [ngClass]="{ 'background-filled': !backgroundTransparent, 'background-transparent': backgroundTransparent}"
+             [ngClass]="{
+             'background-filled': !backgroundTransparent,
+             'background-transparent': backgroundTransparent,
+             'border-bottom-garden-page': isGardenPage}"
              color="primary">
   <mat-toolbar-row fxShow.xs="false" fxShow="true" class="toolbar-row">
     <div class="menu-group">
       <div class="menu-option spacing" routerLink="/home"
            [ngClass]="{'menu-option-active': activeMenu === 'home'}"
-           (click)="scrollSmooth('home')"> One pot gardener</div>
+           (click)="scrollSmooth('home')"> One pot gardener
+      </div>
     </div>
 
     <div class="menu-group">
-
       <div class="menu-option spacing" routerLink="/home"
            [ngClass]="{'menu-option-active': activeMenu === 'testimonials'}"
            (click)="scrollSmooth('testimonials')">
@@ -22,11 +25,11 @@
       </div>
       <div class="menu-option spacing" routerLink="/plant-list" routerLinkActive="menu-option-active"> Plants</div>
       <div class="spacing">
-        <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
+        <button *ngIf="!getLoggedInUser()" mat-raised-button routerLink="/login" color="primary">
           Login
         </button>
       </div>
-      <div class="spacing" *ngIf="!!getLogegdInUser()">
+      <div class="spacing" *ngIf="!!getLoggedInUser()">
         <button mat-mini-fab color="primary" aria-label="Example icon button with a bookmark icon" routerLink="/garden">
           <mat-icon>account_circle</mat-icon>
         </button>
@@ -36,21 +39,20 @@
 
   <mat-toolbar-row fxShow.xs="true" fxShow="false" class="toolbar-row">
     <div class="menu-group">
-      <ng-container *ngIf="!!getLogegdInUser()">
+      <ng-container *ngIf="!!getLoggedInUser()">
         <mat-icon class="user-icon">account_circle</mat-icon>
         <div class="menu-option">
-          {{getLogegdInUser().username}}
+          {{getLoggedInUser().username}}
         </div>
       </ng-container>
     </div>
 
     <div class="menu-group">
-
       <div class="spacing">
-        <button *ngIf="!getLogegdInUser()" mat-raised-button routerLink="/login" color="primary">
+        <button *ngIf="!getLoggedInUser()" mat-raised-button routerLink="/login" color="primary">
           Login
         </button>
-        <button *ngIf="!!getLogegdInUser()" mat-raised-button (click)="logout()" color="primary">
+        <button *ngIf="!!getLoggedInUser()" mat-raised-button (click)="logout()" color="primary">
           Logout
         </button>
       </div>

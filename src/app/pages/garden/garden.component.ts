@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SpecimenDto, SpecimensService} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../../services/LocalStorageHelper';
 
@@ -10,10 +10,16 @@ import {LocalStorageHelper} from '../../services/LocalStorageHelper';
 export class GardenComponent implements OnInit {
 
   specimens: SpecimenDto[];
-  constructor(private specimenService: SpecimensService) { }
+
+  constructor(private specimenService: SpecimensService) {
+  }
 
   ngOnInit(): void {
     this.specimenService.getSpecimens(LocalStorageHelper.retrieveUser().token).subscribe(resposne => this.specimens = resposne);
+  }
+
+  logout(): void {
+    LocalStorageHelper.removeUser();
   }
 
 }

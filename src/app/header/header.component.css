@@ -85,3 +85,7 @@ mat-toolbar {
   padding-right: 32px;
 }
 
+.border-bottom-garden-page {
+  border-bottom: 1px solid var(--light-gray);
+}
+

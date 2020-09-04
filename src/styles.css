@@ -9,10 +9,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   --medium-green: rgb(109, 141, 121);
   --dark-green: rgb(85, 108, 114);
   --very-dark-green: #1E231A;
-  --dark-red: #cd5334;
+  --dark-red: #cd6146;
   --light-yeloow: #F1CAA7;
   --accent: black;
   --warn: var(--light-yeloow);
   --primary: var(--medium-green);
   --exWhite: white;
+}
+
+.snack-error {
+  color: var(--exWhite);
+}
+
+.snack-success {
+  background-color: var(--light-green);
+  color: var(--accent);
 }

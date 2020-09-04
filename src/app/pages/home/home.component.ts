@@ -8,26 +8,6 @@ import {PlantTypeDto} from '@iuliacornea/gardener-api';
 })
 export class HomeComponent implements OnInit {
 
-  exemplePlantTypes: PlantTypeDto[] = [
-    {
-      name: 'Monstera',
-      image: '',
-      featuresConfiguration: null,
-      growingConfiguration: null
-    },
-    {
-      name: 'Aloe vera',
-      image: '',
-      featuresConfiguration: null,
-      growingConfiguration: null
-    },
-    {
-      name: 'Aloe vera',
-      image: '',
-      featuresConfiguration: null,
-      growingConfiguration: null
-    }];
-
   constructor() {
   }
 

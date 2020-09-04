@@ -21,7 +21,7 @@ export class PlantGrowingConfigsFormComponent implements OnInit {
   @Output()
   valueChange: EventEmitter<GrowingConfigurationDto> = new EventEmitter<GrowingConfigurationDto>();
 
-  growingConfigs: GrowingConfigurationDto = {};
+  growingConfigs: GrowingConfigurationDto;
 
   fiveDegreeScale = [
     FiveDegreeScale.VERYLOW,

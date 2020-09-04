@@ -48,6 +48,11 @@ const routes: Routes = [
   {
     path: 'specimen-form',
     component: SpecimenFormComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
   //,
   // {

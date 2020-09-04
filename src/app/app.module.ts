@@ -46,6 +46,7 @@ import { SpecimenFormComponent } from './pages/garden/specimen-form/specimen-for
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { GardenerCardComponent } from './pages/garden/gardener-card/gardener-card.component';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -106,7 +107,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MatSelectModule,
     MatTabsModule,
     FlexLayoutModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatSnackBarModule
   ],
   entryComponents: [
     PlantIdentificationDialog

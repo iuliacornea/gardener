@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserDto} from '@iuliacornea/gardener-api';
 import {LocalStorageHelper} from '../services/LocalStorageHelper';
-import {ActivatedRoute, ActivatedRouteSnapshot, ResolveEnd, Router} from '@angular/router';
-import {element} from 'protractor';
+import {ResolveEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'gar-header',
@@ -11,8 +10,8 @@ import {element} from 'protractor';
 })
 export class HeaderComponent implements OnInit {
 
-  expandMenu = false;
   backgroundTransparent = false;
+  isGardenPage = false;
   activeMenu = '';
 
   constructor(private router: Router) {
@@ -20,29 +19,27 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe(event => {
-      if (event instanceof ResolveEnd) {
-        if (event.url === '/home') {
-          this.backgroundTransparent = true;
-        } else {
-          this.backgroundTransparent = false;
-          this.activeMenu = '';
-        }
+      if (this.router.routerState.snapshot.url === '/home') {
+        this.backgroundTransparent = true;
+      } else {
+        this.backgroundTransparent = false;
+        this.activeMenu = '';
+      }
+      if (this.router.routerState.snapshot.url === '/garden') {
+        this.isGardenPage = true;
+      } else {
+        this.isGardenPage = false;
       }
     });
     window.addEventListener('scroll', () => {
-      if (this.router.isActive('/home', true)) {
+      if (this.router.routerState.snapshot.url === '/home') {
         this.setToolbarBackgroundTransparent();
         this.updateHeaderActiveLink();
-        this.backgroundTransparent = false;
       }
     });
   }
 
-  switchTheme(): void {
-    (document.getElementById('themeLink') as HTMLLinkElement).href = '/assets/indigo-pink.css';
-  }
-
-  getLogegdInUser(): UserDto {
+  getLoggedInUser(): UserDto {
     return LocalStorageHelper.retrieveUser();
   }
 
@@ -65,7 +62,7 @@ export class HeaderComponent implements OnInit {
       this.activeMenu = 'about-us';
     } else if (document.getElementById('testimonials').getBoundingClientRect().top < 64) {
       this.activeMenu = 'testimonials';
-    } else if (document.getElementById('home').getBoundingClientRect().top > - 400) {
+    } else if (document.getElementById('home').getBoundingClientRect().top > -400) {
       this.activeMenu = 'home';
     }
   }

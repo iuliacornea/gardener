@@ -35,7 +35,7 @@ export class PlantFeaturesFormComponent implements OnInit {
   @Output()
   valueChange: EventEmitter<FeaturesConfigurationDto> = new EventEmitter<FeaturesConfigurationDto>();
 
-  featuresConfig: FeaturesConfigurationDto = {};
+  featuresConfig: FeaturesConfigurationDto;
 
   stemType = [
     StemType.HERBACEOUS,

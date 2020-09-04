@@ -15,8 +15,12 @@ export class PlantFormComponent implements OnInit {
     featuresConfiguration: null,
     growingConfiguration: null
   };
-  featuresConfig: FeaturesConfigurationDto = {};
-  growingCofig: GrowingConfigurationDto = {};
+  featuresConfig: FeaturesConfigurationDto = {
+    name: ''
+  };
+  growingCofig: GrowingConfigurationDto = {
+    name: ''
+  };
 
   constructor(private plantsService: PlantsService, private router: Router) {
   }
