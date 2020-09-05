@@ -1,23 +1,32 @@
 <div class="content-container">
   <div class="plant-form">
     <mat-tab-group mat-align-tabs="center">
+
+      <!-- Details -->
       <mat-tab label="Details">
-        <gar-plant-details-form class="plant-form-column" [(value)]="plantDetails"></gar-plant-details-form>
+        <gar-plant-details-form class="plant-form-column"
+                                [(value)]="plantDetails"></gar-plant-details-form>
       </mat-tab>
+
+      <!-- Features -->
       <!--    <mat-tab label="Features">-->
       <!--      <gar-plant-features-form class="plant-form-column" [(value)]="featuresConfig"></gar-plant-features-form>-->
       <!--    </mat-tab>-->
+
+      <!-- Growing configs -->
       <mat-tab label="Growing">
         <gar-plant-growing-configs-form class="plant-form-column"
                                         [(value)]="growingCofig"></gar-plant-growing-configs-form>
       </mat-tab>
     </mat-tab-group>
 
+    <!-- Buttons -->
     <div class="form-buttons">
-      <button mat-raised-button (click)="onSave()">
+      <button mat-raised-button (click)="onSave()" color="primary">
         {{"FORM.SAVE" | translate}}
       </button>
     </div>
+
   </div>
 </div>
 

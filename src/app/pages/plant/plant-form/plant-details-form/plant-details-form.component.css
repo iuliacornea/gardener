@@ -2,3 +2,9 @@
   display: flex;
   flex-flow: column;
 }
+
+.plant-details-form-container {
+  margin-top: var(--form-fields-margin-top);
+  display: flex;
+  flex-flow: column;
+}

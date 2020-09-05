@@ -22,14 +22,7 @@ export class PlantDetailsFormComponent implements OnInit {
   @Output()
   valueChange: EventEmitter<PlantTypeDto> = new EventEmitter<PlantTypeDto>();
 
-  plantDetails: PlantTypeDto = {
-    id: '',
-    name: '',
-    description: '',
-    image: '',
-    featuresConfiguration: null,
-    growingConfiguration: null
-  };
+  plantDetails: PlantTypeDto;
 
   constructor() {
   }

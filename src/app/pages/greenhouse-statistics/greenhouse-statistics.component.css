@@ -1,6 +1,6 @@
 :host {
   height: 100%;
-  margin-top: var(--headeHeight);
+  margin-top: var(--headerHeight);
 }
 
 .statistics {

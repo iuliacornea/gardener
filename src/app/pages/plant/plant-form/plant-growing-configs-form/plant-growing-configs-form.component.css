@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-flow: column;
-  margin-top: 24px;
+  margin-top: var(--form-fields-margin-top);
 }
 
 .plant-growing-configs-form div {

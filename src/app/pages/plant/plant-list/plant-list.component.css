@@ -1,5 +1,5 @@
 .plant-list-container {
-  margin-top: var(--headeHeight);
+  margin-top: var(--headerHeight);
   background-color: var(--dark-green);
 }
 

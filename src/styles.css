@@ -15,7 +15,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   --warn: var(--dark-red);
   --primary: var(--medium-green);
   --exWhite: white;
-  --headeHeight: 64px;
+  --headerHeight: 64px;
+  --form-fields-margin-top: 24px;
 }
 
 .snack-error {
