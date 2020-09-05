@@ -1,0 +1,56 @@
+<mat-card *ngIf="!!specimen" class="card">
+  <mat-card-header>
+    <mat-card-title>{{specimen.name}}</mat-card-title>
+    <mat-card-subtitle>{{specimen.plantType.name}}</mat-card-subtitle>
+    <button mat-icon-button matSuffix [routerLink]="['/specimen-form', specimen.id]">
+      <mat-icon>edit</mat-icon>
+    </button>
+  </mat-card-header>
+  <img mat-card-image src="{{specimen.plantType.image}}" class="card-image">
+  <mat-card-content>
+    <div class="requirements">
+      <div class="requirements-row">
+        <mat-icon>wb_sunny</mat-icon>
+        <div class="requirements-info">
+          Light intensity: {{lastStatistic?.lightIntensityLux}}lux
+          <br>
+          Should be between {{specimen.plantType.growingConfiguration?.lightIntensityMin}}lux
+          - {{specimen.plantType.growingConfiguration?.lightIntensityMax}}lux.
+        </div>
+      </div>
+      <div class="requirements-row">
+        <mat-icon>home</mat-icon>
+        <div class="requirements-info"> Temperature: {{lastStatistic?.airTemperatureCelsius}}°C
+          <br>
+          Should be between {{minTemperature}}°C - {{maxTemperature}}°C.
+        </div>
+      </div>
+      <div class="requirements-row">
+        <mat-icon>cloud</mat-icon>
+        <div class="requirements-info"> Air humidity: {{lastStatistic?.airHumidityPercentage}}%
+          <br>
+          Should be between {{specimen.plantType.growingConfiguration?.airHumidityMin}}%
+          - {{specimen.plantType.growingConfiguration?.airHumidityMax}}%.
+        </div>
+      </div>
+      <div class="requirements-row">
+        <mat-icon>opacity</mat-icon>
+        <div class="requirements-info"> Soil moisture: {{lastStatistic?.soilMoisturePercentage}}%
+          <br>
+          Should be between {{minSoilMoisture}}% - {{maxSoilMoisture}}%.
+        </div>
+      </div>
+      <div class="requirements-row">
+        <mat-icon>hourglass_bottom</mat-icon>
+        <div class="requirements-info">Water regularly
+          every {{specimen.plantType.growingConfiguration?.wateringIntervalDays}}
+          days.
+        </div>
+      </div>
+      <div class="requirements-row" [routerLink]="['/specimen-statistics', specimen.id]">
+        <mat-icon aria-hidden="true" color="primary">calendar_today</mat-icon>
+        <button mat-button> View all time</button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

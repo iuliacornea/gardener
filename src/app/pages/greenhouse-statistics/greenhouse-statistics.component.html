@@ -1,6 +1,9 @@
 <div class="statistics">
-  <h1>
-    One pot statistics from {{gardenerId}}
+  <h1 *ngIf="!specimenId && !!gardenerId">
+    One pot statistics from {{gardenerId}} the gardener
+  </h1>
+  <h1 *ngIf="!!specimenId && !gardenerId">
+    One pot statistics for {{specimenId}} the plant
   </h1>
 
   <table mat-table [dataSource]="dataSource" class="statistics-table">
@@ -10,7 +13,7 @@
 
     <ng-container matColumnDef="receivedAt">
       <th mat-header-cell *matHeaderCellDef>Received at</th>
-      <td mat-cell *matCellDef="let element"> {{element.receivedAt | date: " dd MMM hh:ss"}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.receivedAt | date: " dd MMM HH:mm"}} </td>
     </ng-container>
 
     <ng-container matColumnDef="airTemperatureCelsius">

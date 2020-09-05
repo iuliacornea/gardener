@@ -1,46 +1,3 @@
-<!--<mat-card *ngIf="!!plant" class="card">-->
-<!--  <mat-card-header>-->
-<!--    <mat-card-title>{{plant.name}}</mat-card-title>-->
-<!--  </mat-card-header>-->
-<!--  <img mat-card-image src="{{plant.image}}" class="card-image">-->
-<!--  <mat-card-content>-->
-<!--    <p>-->
-<!--      {{plant.description}}-->
-<!--      {{plant.image}}-->
-<!--    </p>-->
-<!--  </mat-card-content>-->
-<!--</mat-card>-->
-
-<mat-card *ngIf="!!specimen" class="card">
-  <mat-card-header>
-    <mat-card-title>{{specimen.name}}</mat-card-title>
-    <mat-card-subtitle>{{specimen.plantType.name}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{specimen.plantType.image}}" class="card-image">
-  <mat-card-content>
-    <p>
-      {{specimen.season}}
-    </p>
-    <div class="stat">
-      <mat-icon aria-hidden="true" color="accent">opacity</mat-icon>
-      <span> Soil humidity: Medium</span>
-    </div>
-    <div class="stat">
-      <mat-icon aria-hidden="true" color="accent">brightness_medium</mat-icon>
-      <span> Luminosity: 122</span>
-    </div>
-    <div class="stat">
-      <mat-icon aria-hidden="true" color="accent">cloud_queue</mat-icon>
-      <span> Air temperature: 23°C</span>
-    </div>
-    <div class="stat">
-      <mat-icon aria-hidden="true" color="accent">cloud_circle</mat-icon>
-      <span> Air humidity: 66%</span>
-    </div>
-  </mat-card-content>
-</mat-card>
-
-
 <div *ngIf="!!plant" class="plant-example">
   <img src="{{plant.image}}">
   <h3>{{plant.name}}</h3>
@@ -91,6 +48,4 @@
       </div>
     </mat-expansion-panel>
   </mat-accordion>
-
-
 </div>

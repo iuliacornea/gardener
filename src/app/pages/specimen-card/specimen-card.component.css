@@ -1,0 +1,74 @@
+.card {
+  width: 300px;
+  margin-bottom: 40px;
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.card-image {
+  height: 240px;
+  object-fit: cover;
+}
+
+.mat-card-content {
+  min-height: 100px;
+  overflow: hidden;
+}
+
+.plant-example {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0 20px 80px 20px;
+  width: 300px;
+  overflow: hidden;
+  color: var(--exWhite);
+}
+
+.plant-example h3 {
+  font-family: News Cycle, sans-serif;
+  font-size: 20px;
+}
+
+img {
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.description {
+  height: 80px;
+  overflow: hidden;
+}
+
+.requirements {
+  padding-left: 10px;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.requirements-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.requirements-info {
+  margin-left: 15px;
+}
+
+mat-expansion-panel-header, mat-expansion-panel-header.mat-expanded {
+  height: 40px;
+}
+
+mat-card-header {
+  justify-content: space-between;
+}

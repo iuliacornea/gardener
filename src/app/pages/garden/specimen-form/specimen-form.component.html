@@ -1,6 +1,7 @@
 <div class="specimen-form-container">
 
-  <h1>Add a new home plant</h1>
+  <h1 *ngIf="!specimen.id">Add a new home plant</h1>
+  <h1 *ngIf="!!specimen.id">Edit {{specimen.name}}</h1>
   <div class="specimen-form">
     <mat-form-field appearance="outline">
       <mat-label>Name of the plant</mat-label>
@@ -9,13 +10,27 @@
 
     <mat-form-field appearance="outline">
       <mat-label>Season</mat-label>
-      <input matInput [(ngModel)]="specimen.season">
+      <mat-select [(ngModel)]="specimen.season">
+        <mat-option [value]="'SPRING'">Spring</mat-option>
+        <mat-option [value]="'SUMMER'">Summer</mat-option>
+        <mat-option [value]="'AUTUMN'">Autumn</mat-option>
+        <mat-option [value]="'WINTER'">Winter</mat-option>
+      </mat-select>
     </mat-form-field>
 
     <mat-form-field appearance="outline">
       <mat-label>Plant type</mat-label>
       <mat-select [(ngModel)]="specimen.plantType">
         <mat-option *ngFor="let val of plantTypes" [value]="val">
+          {{val.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gardener</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let val of gardeners" [value]="val">
           {{val.name}}
         </mat-option>
       </mat-select>

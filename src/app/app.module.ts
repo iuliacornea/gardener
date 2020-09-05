@@ -51,6 +51,7 @@ import { OrderFormComponent } from './pages/order-form/order-form.component';
 import { OrdersComponent } from './pages/orders/orders.component';
 import {MatTableModule} from '@angular/material/table';
 import { GreenhouseStatisticsComponent } from './pages/greenhouse-statistics/greenhouse-statistics.component';
+import { SpecimenCardComponent } from './pages/specimen-card/specimen-card.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -83,7 +84,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     GardenerCardComponent,
     OrderFormComponent,
     OrdersComponent,
-    GreenhouseStatisticsComponent
+    GreenhouseStatisticsComponent,
+    SpecimenCardComponent
   ],
   imports: [
     BrowserModule,

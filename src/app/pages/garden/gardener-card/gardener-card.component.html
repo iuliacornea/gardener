@@ -24,20 +24,20 @@
       <!-- Last statistics -->
       <div *ngIf="displayLastStatistics && !!lastStatistics" class="statistics-info">
         <div class="statistics">
-          <mat-icon aria-hidden="true" color="accent">opacity</mat-icon>
-          <div> Soil humidity: {{lastStatistics.soilMoisturePercentage}}%</div>
-        </div>
-        <div class="statistics">
-          <mat-icon aria-hidden="true" color="accent">brightness_medium</mat-icon>
+          <mat-icon aria-hidden="true" color="accent">wb_sunny</mat-icon>
           <div> Luminosity: {{lastStatistics.lightIntensityLux}}lux</div>
         </div>
         <div class="statistics">
-          <mat-icon aria-hidden="true" color="accent">cloud_queue</mat-icon>
+          <mat-icon aria-hidden="true" color="accent">home</mat-icon>
           <div> Air temperature: {{lastStatistics.airTemperatureCelsius}}°C</div>
         </div>
         <div class="statistics">
-          <mat-icon aria-hidden="true" color="accent">cloud_circle</mat-icon>
+          <mat-icon aria-hidden="true" color="accent">cloud</mat-icon>
           <div> Air humidity: {{lastStatistics.airHumidityPercentage}}%</div>
+        </div>
+        <div class="statistics">
+          <mat-icon aria-hidden="true" color="accent">opacity</mat-icon>
+          <div> Soil moisture: {{lastStatistics.soilMoisturePercentage}}%</div>
         </div>
         <div class="statistics" [routerLink]="['/gardener-statistics', gardener.id]">
           <mat-icon aria-hidden="true">calendar_today</mat-icon>

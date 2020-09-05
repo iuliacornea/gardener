@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {PlantsService, PlantTypeDto, SpecimenDto} from '@iuliacornea/gardener-api';
+import {PlantTypeDto} from '@iuliacornea/gardener-api';
 
 @Component({
   selector: 'gar-plant-card',
@@ -12,13 +12,6 @@ export class PlantCardComponent implements OnInit {
 
   @Input()
   plant: PlantTypeDto;
-
-  @Input()
-  specimen: SpecimenDto;
-
-  toggleRequirements(): void {
-    this.displayRequirements = !this.displayRequirements;
-  }
 
   ngOnInit(): void {
     console.log(this.plant);

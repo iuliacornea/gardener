@@ -53,8 +53,16 @@ const routes: Routes = [
     component: SpecimenFormComponent
   },
   {
+    path: 'specimen-form/:specimenId',
+    component: SpecimenFormComponent
+  },
+  {
     path: 'orders',
     component: OrdersComponent
+  },
+  {
+    path: 'specimen-statistics/:specimenId',
+    component: GreenhouseStatisticsComponent
   },
   {
     path: 'gardener-statistics/:gardenerId',

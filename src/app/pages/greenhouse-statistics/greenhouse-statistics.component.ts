@@ -23,8 +23,8 @@ export class GreenhouseStatisticsComponent implements OnInit {
   ngOnInit(): void {
     const routeSnapshot = this.route.snapshot;
     this.gardenerId = routeSnapshot.paramMap.get('gardenerId') !== 'null' && routeSnapshot.paramMap.get('gardenerId');
-    // this.specimenId = routeSnapshot.paramMap.get('specimenId') !== 'null' && routeSnapshot.paramMap.get('specimenId');
-    this.statisticsService.getStats(LocalStorageHelper.userToken(), this.gardenerId, null).subscribe(response => {
+    this.specimenId = routeSnapshot.paramMap.get('specimenId') !== 'null' && routeSnapshot.paramMap.get('specimenId');
+    this.statisticsService.getStats(LocalStorageHelper.userToken(), this.gardenerId, this.specimenId).subscribe(response => {
 
       this.dataSource = response.sort((a, b) => {
         return new Date(b.receivedAt).getTime() - new Date(a.receivedAt).getTime();
