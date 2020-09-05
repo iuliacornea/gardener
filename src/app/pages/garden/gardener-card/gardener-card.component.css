@@ -25,13 +25,13 @@
 }
 
 .info h1 {
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   color: var(--exWhite);
   font-family: Catamaran, sans-serif;
 }
 
 .info {
-  height: 210px;
+  height: 240px;
   width: 300px;
   background-color: var(--dark-green);
   color: var(--exWhite);

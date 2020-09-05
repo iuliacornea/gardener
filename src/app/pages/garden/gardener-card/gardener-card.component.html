@@ -39,8 +39,9 @@
           <mat-icon aria-hidden="true" color="accent">cloud_circle</mat-icon>
           <div> Air humidity: {{lastStatistics.airHumidityPercentage}}%</div>
         </div>
-        <div [routerLink]="['/gardener-statistics', gardener.id]">
-          View all
+        <div class="statistics" [routerLink]="['/gardener-statistics', gardener.id]">
+          <mat-icon aria-hidden="true">calendar_today</mat-icon>
+          <button mat-button> View all time</button>
         </div>
       </div>
 
