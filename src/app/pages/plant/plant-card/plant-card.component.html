@@ -56,26 +56,37 @@
         <mat-divider class="pb-10"></mat-divider>
         <div class="requirements-row">
           <mat-icon>wb_sunny</mat-icon>
-          <div class="requirements-info"> Luminosity should be around {{plant.growingConfiguration?.lightIntensitySummer}} lux in summer
-            and {{plant.growingConfiguration?.lightIntensitySummer}} lux in winter.</div>
+          <div class="requirements-info"> Light intensity between {{plant.growingConfiguration?.lightIntensityMin}}lux
+            - {{plant.growingConfiguration?.lightIntensityMax}}lux.
+          </div>
         </div>
         <div class="requirements-row">
           <mat-icon>home</mat-icon>
-          <div class="requirements-info"> Temperature should be around {{plant.growingConfiguration?.airTemperatureSummer}} °C in summer
-            and {{plant.growingConfiguration?.airTemperatureWinter}} °C in winter.</div>
+          <div class="requirements-info"> Temperature between {{plant.growingConfiguration?.airTemperatureSummerMin}}°C
+            - {{plant.growingConfiguration?.airTemperatureSummerMax}}°C in summer
+            and {{plant.growingConfiguration?.airTemperatureWinterMin}}°C
+            - {{plant.growingConfiguration?.airTemperatureWinterMax}}°C in winter.
+          </div>
         </div>
         <div class="requirements-row">
           <mat-icon>cloud</mat-icon>
-          <div class="requirements-info"> Air humidity should be around {{plant.growingConfiguration?.airHumidity}} %.</div>
+          <div class="requirements-info"> Air humidity between {{plant.growingConfiguration?.airHumidityMin}}%
+            - {{plant.growingConfiguration?.airHumidityMax}}%.
+          </div>
         </div>
         <div class="requirements-row">
           <mat-icon>opacity</mat-icon>
-          <div class="requirements-info"> Soil humidity should be around {{plant.growingConfiguration?.soilHumiditySummer}} % in summer
-            and {{plant.growingConfiguration?.soilHumidityWinter}} % in winter.</div>
+          <div class="requirements-info"> Soil moisture between {{plant.growingConfiguration?.soilMoistureSummerMin}}%
+            - {{plant.growingConfiguration?.soilMoistureSummerMax}}% in summer
+            and {{plant.growingConfiguration?.soilMoistureWinterMin}}%
+            - {{plant.growingConfiguration?.soilMoistureWinterMax}}% in winter.
+          </div>
         </div>
         <div class="requirements-row">
           <mat-icon>hourglass_bottom</mat-icon>
-          <div class="requirements-info">Water regularly every 7 days in summer and every 14 days in winter.</div>
+          <div class="requirements-info">Water regularly every {{plant.growingConfiguration?.wateringIntervalDays}}
+            days.
+          </div>
         </div>
       </div>
     </mat-expansion-panel>

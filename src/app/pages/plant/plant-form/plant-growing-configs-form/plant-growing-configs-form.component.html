@@ -3,14 +3,14 @@
   <!-- Name -->
   <mat-form-field appearance="outline">
     <mat-label>Growing configuration name</mat-label>
-    <input matInput [formControl]="name">
+    <input matInput [formControl]="name" [(ngModel)]="value.name">
     <mat-error>You must specify a name for this configuration</mat-error>
   </mat-form-field>
 
   <!-- Watering interval in days -->
   <mat-form-field appearance="outline">
     <mat-label>Watering interval in days</mat-label>
-    <input matInput [formControl]="wateringIntervalDays" type="number">
+    <input matInput [formControl]="wateringIntervalDays" type="number" [(ngModel)]="value.wateringIntervalDays">
     <mat-error>You must specify an watering interval (in days)</mat-error>
   </mat-form-field>
 
@@ -19,14 +19,14 @@
     <!-- Minimum air humidity -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="airHumidityMin" type="number">
+      <input matInput [formControl]="airHumidityMin" type="number" [(ngModel)]="value.airHumidityMin">
       <span matSuffix>%</span>
     </mat-form-field>
 
     <!-- Maximum air humidity -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="airHumidityMax" type="number">
+      <input matInput [formControl]="airHumidityMax" type="number" [(ngModel)]="value.airHumidityMax">
       <span matSuffix>%</span>
     </mat-form-field>
   </div>
@@ -36,14 +36,14 @@
     <!-- Minimum temperature in hot season -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="airTemperatureSummerMin" type="number">
+      <input matInput [formControl]="airTemperatureSummerMin" type="number" [(ngModel)]="value.airTemperatureSummerMin">
       <span matSuffix>°</span>
     </mat-form-field>
 
     <!-- Maximum temperature in hot season -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="airTemperatureSummerMax" type="number">
+      <input matInput [formControl]="airTemperatureSummerMax" type="number" [(ngModel)]="value.airTemperatureSummerMax">
       <span matSuffix>°</span>
     </mat-form-field>
   </div>
@@ -53,14 +53,14 @@
     <!-- Minimum temperature in cold season -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="airTemperatureWinterMin" type="number">
+      <input matInput [formControl]="airTemperatureWinterMin" type="number" [(ngModel)]="value.airTemperatureWinterMin">
       <span matSuffix>°</span>
     </mat-form-field>
 
     <!-- Maximum temperature in cold season -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="airTemperatureWinterMax" type="number">
+      <input matInput [formControl]="airTemperatureWinterMax" type="number" [(ngModel)]="value.airTemperatureWinterMax">
       <span matSuffix>°</span>
     </mat-form-field>
   </div>
@@ -71,14 +71,14 @@
     <!-- Minimum light intensity -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="lightIntensityMin" type="number">
+      <input matInput [formControl]="lightIntensityMin" type="number" [(ngModel)]="value.lightIntensityMin">
       <span matSuffix>LUX</span>
     </mat-form-field>
 
     <!-- Maximum light intensity -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="lightIntensityMax" type="number">
+      <input matInput [formControl]="lightIntensityMax" type="number" [(ngModel)]="value.lightIntensityMax">
       <span matSuffix>LUX</span>
     </mat-form-field>
   </div>
@@ -88,14 +88,14 @@
     <!-- Minimum soil moisture in hot season -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="soilMoistureSummerMin" type="number">
+      <input matInput [formControl]="soilMoistureSummerMin" type="number" [(ngModel)]="value.soilMoistureSummerMin">
       <span matSuffix>%</span>
     </mat-form-field>
 
     <!-- Maximum soil moisture in hot season -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="soilMoistureSummerMax" type="number">
+      <input matInput [formControl]="soilMoistureSummerMax" type="number" [(ngModel)]="value.soilMoistureSummerMax">
       <span matSuffix>%</span>
     </mat-form-field>
   </div>
@@ -105,14 +105,14 @@
     <!-- Minimum soil moisture in cold season -->
     <mat-form-field appearance="outline">
       <mat-label>Minimum</mat-label>
-      <input matInput [formControl]="soilMoistureWinterMin" type="number">
+      <input matInput [formControl]="soilMoistureWinterMin" type="number" [(ngModel)]="value.soilMoistureWinterMin">
       <span matSuffix>%</span>
     </mat-form-field>
 
     <!-- Maximum soil moisture in cold season -->
     <mat-form-field appearance="outline">
       <mat-label>Maximum</mat-label>
-      <input matInput [formControl]="soilMoistureWinterMax" type="number">
+      <input matInput [formControl]="soilMoistureWinterMax" type="number" [(ngModel)]="value.soilMoistureWinterMax">
       <span matSuffix>%</span>
     </mat-form-field>
   </div>

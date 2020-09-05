@@ -6,7 +6,7 @@ import {PlantsService, PlantTypeDto, SpecimenDto} from '@iuliacornea/gardener-ap
   templateUrl: './plant-card.component.html',
   styleUrls: ['./plant-card.component.css']
 })
-export class PlantCardComponent {
+export class PlantCardComponent implements OnInit {
 
   displayRequirements = false;
 
@@ -18,6 +18,10 @@ export class PlantCardComponent {
 
   toggleRequirements(): void {
     this.displayRequirements = !this.displayRequirements;
+  }
+
+  ngOnInit(): void {
+    console.log(this.plant);
   }
 
 

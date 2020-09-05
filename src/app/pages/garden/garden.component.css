@@ -8,7 +8,7 @@
 .gardeners {
   width: 15%;
   background-color: #0000003b;
-  height: 100vh;
+  min-height: 81vh;
   padding-left: 2%;
   padding-right: 1%;
   min-width: 320px;
@@ -22,11 +22,11 @@
 
 .gardeners button {
   width: 150px;
+  margin-bottom: var(--form-fields-margin-top);
 }
 
 .gardeners-list {
   margin-top: var(--form-fields-margin-top);
-  margin-bottom: var(--form-fields-margin-top);
   display: flex;
   flex-wrap: wrap;
 }
