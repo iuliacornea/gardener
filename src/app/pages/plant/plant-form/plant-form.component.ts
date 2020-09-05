@@ -15,9 +15,9 @@ export class PlantFormComponent implements OnInit {
     featuresConfiguration: null,
     growingConfiguration: null
   };
-  featuresConfig: FeaturesConfigurationDto = {
-    name: ''
-  };
+  // featuresConfig: FeaturesConfigurationDto = {
+  //   name: ''
+  // };
   growingCofig: GrowingConfigurationDto = {
     name: ''
   };
@@ -28,15 +28,15 @@ export class PlantFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toConsole(): void {
+  onSave(): void {
     this.plantDetails.growingConfiguration = this.growingCofig;
-    this.plantDetails.featuresConfiguration = this.featuresConfig;
+    // this.plantDetails.featuresConfiguration = this.featuresConfig;
     this.plantDetails.userId = LocalStorageHelper.retrieveUser().id;
     this.plantsService.postPlant(LocalStorageHelper.retrieveUser().token, this.plantDetails).subscribe(response => {
       console.log(response);
       this.router.navigate(['plant-list']);
     });
-    console.log(this.featuresConfig);
+    // console.log(this.featuresConfig);
     console.log(this.growingCofig);
     console.log(this.plantDetails);
   }

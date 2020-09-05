@@ -1,63 +1,120 @@
-<label>{{"FORM.SOIL_TYPE_LABEL" | translate}}</label>
-<mat-form-field appearance="outline">
-  <mat-select [(ngModel)]="growingConfigs.soilType">
-    <mat-option *ngFor="let val of soilType" [value]="val">
-      {{"FORM.SOIL_TYPE." + val | translate}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+<div class="plant-growing-configs-form">
 
-<label>{{"FORM.SOIL_QUANTITY_LABEL" | translate}}</label>
-<mat-form-field appearance="outline">
-  <input matInput type="number" [(ngModel)]="growingConfigs.soilQuantity">
-  <span matSuffix>x</span>
-</mat-form-field>
+  <!-- Name -->
+  <mat-form-field appearance="outline">
+    <mat-label>Growing configuration name</mat-label>
+    <input matInput [formControl]="name">
+    <mat-error>You must specify a name for this configuration</mat-error>
+  </mat-form-field>
 
-<label>{{"FORM.SOIL_HUMIDITY_SUMMER" | translate}}</label>
-<mat-button-toggle-group #soilHumiditySummer="matButtonToggleGroup" [(ngModel)]="growingConfigs.soilHumiditySummer">
-  <mat-button-toggle class="no-border" *ngFor="let val of fiveDegreeScale" value="{{val}}">
-    {{"FORM.SCALE." + val | translate}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
+  <!-- Watering interval in days -->
+  <mat-form-field appearance="outline">
+    <mat-label>Watering interval in days</mat-label>
+    <input matInput [formControl]="wateringIntervalDays" type="number">
+    <mat-error>You must specify an watering interval (in days)</mat-error>
+  </mat-form-field>
 
-<label>{{"FORM.SOIL_HUMIDITY_WINTER" | translate}}</label>
-<mat-button-toggle-group #soilHumidityWinter="matButtonToggleGroup" [(ngModel)]="growingConfigs.soilHumidityWinter">
-  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
-    {{"FORM.SCALE." + val | translate}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
+  <label>Air humidity</label>
+  <div>
+    <!-- Minimum air humidity -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="airHumidityMin" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
 
-<label>{{"FORM.AIR_HUMIDITY" | translate}}</label>
-<mat-button-toggle-group #airHumidity="matButtonToggleGroup" [(ngModel)]="growingConfigs.airHumidity">
-  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
-    {{"FORM.SCALE." + val | translate}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
+    <!-- Maximum air humidity -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="airHumidityMax" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
+  </div>
 
-<label>{{"FORM.AIR_TEMPERATURE_SUMMER" | translate}}</label>
-<mat-form-field appearance="outline">
-  <input matInput type="number" [(ngModel)]="growingConfigs.airTemperatureSummer">
-  <span matSuffix>°C</span>
-</mat-form-field>
+  <label>Surrounding temperature in hot season</label>
+  <div>
+    <!-- Minimum temperature in hot season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="airTemperatureSummerMin" type="number">
+      <span matSuffix>°</span>
+    </mat-form-field>
 
-<label>{{"FORM.AIR_TEMPERATURE_WINTER" | translate}}</label>
-<mat-form-field appearance="outline">
-  <input matInput type="number" [(ngModel)]="growingConfigs.airTemperatureWinter">
-  <span matSuffix>°C</span>
-</mat-form-field>
+    <!-- Maximum temperature in hot season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="airTemperatureSummerMax" type="number">
+      <span matSuffix>°</span>
+    </mat-form-field>
+  </div>
 
-<label>{{"FORM.LIGHT_INTENSITY_SUMMER" | translate}}</label>
-<mat-button-toggle-group #lightIntensitySummer="matButtonToggleGroup" [(ngModel)]="growingConfigs.lightIntensitySummer">
-  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
-    {{"FORM.SCALE." + val | translate}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
+  <label>Surrounding temperatue in cold season</label>
+  <div>
+    <!-- Minimum temperature in cold season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="airTemperatureWinterMin" type="number">
+      <span matSuffix>°</span>
+    </mat-form-field>
 
-<label>{{"FORM.LIGHT_INTENSITY_WINTER" | translate}}</label>
-<mat-button-toggle-group #lightIntensityWinter="matButtonToggleGroup" [(ngModel)]="growingConfigs.lightIntensityWinter">
-  <mat-button-toggle *ngFor="let val of fiveDegreeScale" value="{{val}}">
-    {{"FORM.SCALE." + val | translate}}
-  </mat-button-toggle>
-</mat-button-toggle-group>
+    <!-- Maximum temperature in cold season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="airTemperatureWinterMax" type="number">
+      <span matSuffix>°</span>
+    </mat-form-field>
+  </div>
 
 
+  <label>Light intensity</label>
+  <div>
+    <!-- Minimum light intensity -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="lightIntensityMin" type="number">
+      <span matSuffix>LUX</span>
+    </mat-form-field>
+
+    <!-- Maximum light intensity -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="lightIntensityMax" type="number">
+      <span matSuffix>LUX</span>
+    </mat-form-field>
+  </div>
+
+  <label>Soil moisture in hot season</label>
+  <div>
+    <!-- Minimum soil moisture in hot season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="soilMoistureSummerMin" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
+
+    <!-- Maximum soil moisture in hot season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="soilMoistureSummerMax" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
+  </div>
+
+  <label>Soil moisture in cold season</label>
+  <div>
+    <!-- Minimum soil moisture in cold season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Minimum</mat-label>
+      <input matInput [formControl]="soilMoistureWinterMin" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
+
+    <!-- Maximum soil moisture in cold season -->
+    <mat-form-field appearance="outline">
+      <mat-label>Maximum</mat-label>
+      <input matInput [formControl]="soilMoistureWinterMax" type="number">
+      <span matSuffix>%</span>
+    </mat-form-field>
+  </div>
+
+</div>

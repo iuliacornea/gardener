@@ -1,8 +1,17 @@
+:host {
+  height: 100%;
+  margin-top: var(--headeHeight);
+}
+
 .login-page {
-  background-color: var(--dark-green);
+  background:linear-gradient(to right, var(--dark-green) 0, var(--dark-green) 20%, var(--exWhite) 20%, var(--exWhite) 80%, var(--dark-green) 80%, var(--dark-green) 100%);
+  /*background-color: var(--dark-green);*/
   display: flex;
   flex-flow: column;
+  justify-content: start;
+  padding-top: 10%;
   align-items: center;
+  min-height: 90%;
 }
 
 .mobile-login {
@@ -17,11 +26,6 @@
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 75vh;
-  padding-top: 10%;
-  margin-top: 64px;
-  padding-right: 10px;
-  padding-left: 10px;
 }
 
 .login-form-column {

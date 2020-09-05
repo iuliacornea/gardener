@@ -1,3 +1,21 @@
+:host {
+  height: 100%;
+  margin-top: var(--headeHeight);
+}
+
+.plant-list-container {
+  height: 100%;
+}
+
+.plant-list {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /*padding: 140px 5% 1% 5%;*/
+  background-color: var(--dark-green);
+}
+
 .add-button {
   position: fixed;
   z-index: 1;
@@ -7,12 +25,4 @@
 
 .add-button-xs {
   top: 130px !important;
-}
-
-.plant-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 140px 5% 1% 5%;
-  background-color: var(--dark-green);
 }

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FiveDegreeScale, GrowingConfigurationDto, SoilType} from '@iuliacornea/gardener-api';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'gar-plant-growing-configs-form',
@@ -23,20 +24,20 @@ export class PlantGrowingConfigsFormComponent implements OnInit {
 
   growingConfigs: GrowingConfigurationDto;
 
-  fiveDegreeScale = [
-    FiveDegreeScale.VERYLOW,
-    FiveDegreeScale.LOW,
-    FiveDegreeScale.MEDIUM,
-    FiveDegreeScale.HIGH,
-    FiveDegreeScale.VERYHIGH
-  ];
-
-  soilType = [
-    SoilType.REGULAR,
-    SoilType.CONIFERS,
-    SoilType.ORCHID,
-    SoilType.SUCCULENTS
-  ];
+  name = new FormControl('', Validators.required);
+  airHumidityMin = new FormControl('');
+  airHumidityMax = new FormControl('');
+  airTemperatureSummerMin = new FormControl('');
+  airTemperatureSummerMax = new FormControl('');
+  airTemperatureWinterMin = new FormControl('');
+  airTemperatureWinterMax = new FormControl('');
+  lightIntensityMin = new FormControl('');
+  lightIntensityMax = new FormControl('');
+  soilMoistureSummerMin = new FormControl('');
+  soilMoistureSummerMax = new FormControl('');
+  soilMoistureWinterMin = new FormControl('');
+  soilMoistureWinterMax = new FormControl('');
+  wateringIntervalDays = new FormControl('');
 
   constructor() {
   }

@@ -1,20 +1,23 @@
-<div class="plant-form">
-  <mat-tab-group mat-align-tabs="center">
-    <mat-tab label="Details">
-      <gar-plant-details-form class="plant-form-column" [(value)]="plantDetails"></gar-plant-details-form>
-    </mat-tab>
-    <mat-tab label="Features">
-      <gar-plant-features-form class="plant-form-column" [(value)]="featuresConfig"></gar-plant-features-form>
-    </mat-tab>
-    <mat-tab label="Growing">
-      <gar-plant-growing-configs-form class="plant-form-column" [(value)]="growingCofig"></gar-plant-growing-configs-form>
-    </mat-tab>
-  </mat-tab-group>
+<div class="content-container">
+  <div class="plant-form">
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Details">
+        <gar-plant-details-form class="plant-form-column" [(value)]="plantDetails"></gar-plant-details-form>
+      </mat-tab>
+      <!--    <mat-tab label="Features">-->
+      <!--      <gar-plant-features-form class="plant-form-column" [(value)]="featuresConfig"></gar-plant-features-form>-->
+      <!--    </mat-tab>-->
+      <mat-tab label="Growing">
+        <gar-plant-growing-configs-form class="plant-form-column"
+                                        [(value)]="growingCofig"></gar-plant-growing-configs-form>
+      </mat-tab>
+    </mat-tab-group>
 
-  <div class="form-buttons">
-    <button mat-raised-button (click)="toConsole()">
-      {{"FORM.SAVE" | translate}}
-    </button>
+    <div class="form-buttons">
+      <button mat-raised-button (click)="onSave()">
+        {{"FORM.SAVE" | translate}}
+      </button>
+    </div>
   </div>
 </div>
 

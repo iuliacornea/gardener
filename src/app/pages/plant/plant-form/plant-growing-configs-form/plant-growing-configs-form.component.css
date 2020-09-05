@@ -1,22 +1,11 @@
 .plant-growing-configs-form {
+  width: 100%;
   display: flex;
   flex-flow: column;
+  margin-top: 24px;
 }
 
-mat-button-toggle-group {
-  margin-top: 4px;
-  margin-bottom: 16px;
+.plant-growing-configs-form div {
   display: flex;
   justify-content: space-between;
-  border: none;
-  /* align-items: flex-start; */
 }
-
-mat-button-toggle {
-  width: 17%;
-}
-
-.mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle {
-border: none;
-}
-

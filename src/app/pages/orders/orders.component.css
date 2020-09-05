@@ -1,0 +1,20 @@
+:host {
+  height: 100%;
+  margin-top: var(--headeHeight);
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.orders-table {
+  min-width: 80%;
+  max-width: 96%;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
