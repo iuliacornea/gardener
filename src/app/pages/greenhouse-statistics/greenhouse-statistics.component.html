@@ -1,0 +1,51 @@
+<div class="statistics">
+  <h1>
+    One pot statistics from {{gardenerId}}
+  </h1>
+
+  <table mat-table [dataSource]="dataSource" class="statistics-table">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <ng-container matColumnDef="receivedAt">
+      <th mat-header-cell *matHeaderCellDef>Received at</th>
+      <td mat-cell *matCellDef="let element"> {{element.receivedAt | date: " dd MMM hh:ss"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="airTemperatureCelsius">
+      <th mat-header-cell *matHeaderCellDef>Air temperature</th>
+      <td mat-cell *matCellDef="let element"> {{element.airTemperatureCelsius}}°C </td>
+    </ng-container>
+
+    <ng-container matColumnDef="airHumidityPercentage">
+      <th mat-header-cell *matHeaderCellDef>Air humidity</th>
+      <td mat-cell *matCellDef="let element"> {{element.airHumidityPercentage}}% </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lightIntensityLux">
+      <th mat-header-cell *matHeaderCellDef> Light intensity</th>
+      <td mat-cell *matCellDef="let element"> {{element.lightIntensityLux}}lux </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lightIntensityRaw">
+      <th mat-header-cell *matHeaderCellDef> Light intensity <br>  (raw value)</th>
+      <td mat-cell *matCellDef="let element"> {{element.lightIntensityRaw}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="soilMoisturePercentage">
+      <th mat-header-cell *matHeaderCellDef> Soil moisture</th>
+      <td mat-cell *matCellDef="let element"> {{element.soilMoisturePercentage}}% </td>
+    </ng-container>
+
+    <ng-container matColumnDef="soilMoistureRaw">
+      <th mat-header-cell *matHeaderCellDef> Soil moisture  <br>  (raw value)</th>
+      <td mat-cell *matCellDef="let element"> {{element.soilMoistureRaw}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+

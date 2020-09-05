@@ -1,52 +1,72 @@
 <div class="gardener-card">
+
+  <!-- Content -->
   <div class="content">
+
     <div class="image">
       <img src="/assets/images/gardener_1.jpg">
-
     </div>
+
+    <!-- Info section -->
     <div class="info">
+
       <h1>
-        Jose Mandinga
+        {{gardener.name}}
       </h1>
-      <div *ngIf="!displayLastStatistics" class="config-info container">
+
+      <!-- No statistics -->
+      <div *ngIf="displayLastStatistics && !lastStatistics" class="config-info container">
         <div class="config-info">
-          <label>WiFi network: </label>
-          <div>Martin Router King</div>
-        </div>
-        <div class="config-info">
-          <label>WiFi password: </label>
-          <div>password123</div>
+          <label>has not registered any statistics yet</label>
         </div>
       </div>
 
-      <div *ngIf="displayLastStatistics" class="statistics-info container">
+      <!-- Last statistics -->
+      <div *ngIf="displayLastStatistics && !!lastStatistics" class="statistics-info">
         <div class="statistics">
           <mat-icon aria-hidden="true" color="accent">opacity</mat-icon>
-          <div> Soil humidity: Medium</div>
+          <div> Soil humidity: {{lastStatistics.soilMoisturePercentage}}%</div>
         </div>
         <div class="statistics">
           <mat-icon aria-hidden="true" color="accent">brightness_medium</mat-icon>
-          <div> Luminosity: 122</div>
+          <div> Luminosity: {{lastStatistics.lightIntensityLux}}lux</div>
         </div>
         <div class="statistics">
           <mat-icon aria-hidden="true" color="accent">cloud_queue</mat-icon>
-          <div> Air temperature: 23°C</div>
+          <div> Air temperature: {{lastStatistics.airTemperatureCelsius}}°C</div>
         </div>
         <div class="statistics">
           <mat-icon aria-hidden="true" color="accent">cloud_circle</mat-icon>
-          <div> Air humidity: 66%</div>
+          <div> Air humidity: {{lastStatistics.airHumidityPercentage}}%</div>
+        </div>
+        <div [routerLink]="['/gardener-statistics', gardener.id]">
+          View all
         </div>
       </div>
 
+      <!-- Configuration -->
+      <div *ngIf="!displayLastStatistics" class="config-info container">
+        <div class="config-info">
+          <label>WiFi network</label>
+          <div>{{gardener.wifiNetwork}}</div>
+        </div>
+        <div class="config-info">
+          <label>WiFi password</label>
+          <div>{{gardener.wifiPassword}}</div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <!-- Footer -->
   <div class="buttons">
     <div class="bottom-button">
-      <button mat-button (click)="toggleInfoDisplay()">Last statistics</button>
+      <button mat-button (click)="displayLastStatistics=true">Last statistics</button>
     </div>
     <div class="vertical-divider"></div>
-    <div class="bottom-button" (click)="toggleInfoDisplay()">
+    <div class="bottom-button" (click)="displayLastStatistics=false">
       <button mat-button>Configuration</button>
     </div>
   </div>
+
 </div>

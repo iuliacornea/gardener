@@ -16,4 +16,8 @@ export class LocalStorageHelper {
   static removeUser(): void {
     localStorage.setItem(this.USER_KEY, '');
   }
+
+  static userToken(): string {
+    return !!LocalStorageHelper.retrieveUser() && LocalStorageHelper.retrieveUser().token;
+  }
 }
