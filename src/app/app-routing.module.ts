@@ -11,6 +11,7 @@ import {GardenComponent} from './pages/garden/garden.component';
 import {SpecimenFormComponent} from './pages/garden/specimen-form/specimen-form.component';
 import {BASE_PATH as GARDEN_API_BASE_PATH} from '@iuliacornea/gardener-api';
 import { environment } from './../environments/environment';
+import {OrdersComponent} from './pages/orders/orders.component';
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path: 'specimen-form',
     component: SpecimenFormComponent
+  },
+  {
+    path: 'orders',
+    component: OrdersComponent
   },
   {
     path: '',

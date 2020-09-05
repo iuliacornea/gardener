@@ -67,4 +67,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  loggedInUserIsAdmin(): boolean {
+    return LocalStorageHelper.retrieveUser()?.role === 'ADMIN';
+  }
+
 }

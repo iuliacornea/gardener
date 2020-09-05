@@ -12,9 +12,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   --dark-red: #cd6146;
   --light-yeloow: #F1CAA7;
   --accent: black;
-  --warn: var(--light-yeloow);
+  --warn: var(--dark-red);
   --primary: var(--medium-green);
   --exWhite: white;
+  --headeHeight: 64px;
 }
 
 .snack-error {

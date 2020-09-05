@@ -10,6 +10,9 @@
            [ngClass]="{'menu-option-active': activeMenu === 'home'}"
            (click)="scrollSmooth('home')"> One pot gardener
       </div>
+      <div *ngIf="loggedInUserIsAdmin()" class="menu-option spacing" routerLink="/orders" routerLinkActive="menu-option-active">
+        Orders
+      </div>
     </div>
 
     <div class="menu-group">
