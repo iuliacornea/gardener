@@ -1,19 +1,12 @@
-:host {
-  height: 100%;
-  margin-top: var(--headeHeight);
-}
-
 .plant-list-container {
-  height: 100%;
+  margin-top: var(--headeHeight);
+  background-color: var(--dark-green);
 }
 
-.plant-list {
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  /*padding: 140px 5% 1% 5%;*/
-  background-color: var(--dark-green);
+h1 {
+  font: 700 48px/80px News Cycle, sans-serif;
+  color: var(--exWhite);
+  text-align: center;
 }
 
 .add-button {
@@ -25,4 +18,10 @@
 
 .add-button-xs {
   top: 130px !important;
+}
+
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
