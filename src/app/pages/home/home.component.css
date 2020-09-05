@@ -98,3 +98,21 @@ img {
   font: 600 40px/64px News Cycle, sans-serif;
   color: var(--primary);
 }
+
+
+.info {
+  background-color: var(--accent);
+  color: var(--exWhite);
+  padding: var(--form-fields-margin-top) 140px var(--form-fields-margin-top) 140px;
+}
+
+.info h1 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: News Cycle,sans-serif;
+  color: var(--primary);
+}
+
+.info mat-divider {
+  background-color: var(--exWhite);
+}

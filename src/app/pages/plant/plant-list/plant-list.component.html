@@ -1,23 +1,26 @@
 <div class="plant-list-container">
 
-  <h1>Our plants</h1>
-
-  <!-- add button -->
-  <button *ngIf="userLoggedIn()" mat-fab color="primary" routerLink="/add-plant"
-          [ngClass.xs]="'add-button-xs'"
-          class="add-button">
-    <mat-icon>add</mat-icon>
-  </button>
-
-  <!-- list of plant cards -->
   <div class="plant-list">
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
-    <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+    <h1>Our plants</h1>
+
+    <!-- add button -->
+    <button *ngIf="userLoggedIn()" mat-fab color="primary" routerLink="/add-plant"
+            [ngClass.xs]="'add-button-xs'"
+            class="add-button">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <!-- list of plant cards -->
+    <div class="plant-list">
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+      <gar-plant-card *ngFor="let plant of plants" [plant]="plant" class="plant"></gar-plant-card>
+    </div>
   </div>
+
 </div>

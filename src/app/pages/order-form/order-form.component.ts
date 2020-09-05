@@ -4,6 +4,7 @@ import {FormControl, RequiredValidator, Validators} from '@angular/forms';
 import {LocalStorageHelper} from '../../services/LocalStorageHelper';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {SnackBarHelper} from '../../services/SnackBarHelper';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'gar-order-form',
@@ -17,7 +18,7 @@ export class OrderFormComponent implements OnInit {
   wifiPassword = new FormControl('', Validators.required);
   hidePass = true;
 
-  constructor(private _snackBar: MatSnackBar, private ordersService: OrdersService) {
+  constructor(private _snackBar: MatSnackBar, private ordersService: OrdersService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -35,9 +36,10 @@ export class OrderFormComponent implements OnInit {
       wifiPassword: this.wifiPassword.value
     };
     this.ordersService.postOrder(LocalStorageHelper.retrieveUser().token, order).subscribe(response => {
-      this._snackBar.open(response.status, null, SnackBarHelper.success);
+      this._snackBar.open('Succesfully orderd gardener', null, SnackBarHelper.success);
+      this.router.navigate(['/garden']);
     }, error => {
-      this._snackBar.open(error.status, null, SnackBarHelper.error);
+      this._snackBar.open('There was an error while sending your order', null, SnackBarHelper.error);
     });
   }
 

@@ -1,21 +1,50 @@
-.container {
-  margin-top: 64px;
-  min-height: 100vh;
-  padding-left: 60px;
+.garden-container {
+  margin-top: var(--headerHeight);
   background-color: var(--light-gray);
+  display: flex;
+  flex-direction: row;
+}
+
+.gardeners {
+  width: 15%;
+  background-color: #0000003b;
+  height: 100vh;
+  padding-left: 2%;
+  padding-right: 1%;
+  min-width: 320px;
+}
+
+.gardeners h1 {
+  font-weight: 700;
+  font-family: News Cycle,sans-serif;
+  margin-top: var(--headerHeight);
+}
+
+.gardeners button {
+  width: 150px;
 }
 
 .gardeners-list {
-  margin-top: 60px;
+  margin-top: var(--form-fields-margin-top);
+  margin-bottom: var(--form-fields-margin-top);
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
 }
+
+.plants {
+  width: 81.5%;
+  margin-top: var(--headerHeight);
+}
+.plants h1 {
+  font: 700 48px/80px News Cycle, sans-serif;
+  text-align: center;
+}
+
 .add-button {
   position: absolute;
   z-index: 1;
-  top: 0;
-  right: 0;
+  top: 10%;
+  right: 2%;
 }
 
 .plant-list {

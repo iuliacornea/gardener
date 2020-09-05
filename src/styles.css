@@ -17,6 +17,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
   --exWhite: white;
   --headerHeight: 64px;
   --form-fields-margin-top: 24px;
+  --double-header-height: 128px;
 }
 
 .snack-error {

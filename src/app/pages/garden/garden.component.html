@@ -1,28 +1,35 @@
-<div class="container">
-  <button mat-raised-button color="primary" (click)="logout()">Logout</button>
-  <h1>My gardeners</h1>
+<div class="garden-container">
 
-  <div class="gardeners-list">
-    <gar-gardener-card *ngFor="let g of gardeners" [gardener]="g"></gar-gardener-card>
+  <div class="gardeners">
+    <h1>Welcome back {{username()}}!</h1>
+    <p>
+      We were all born to be peaceful citizens of the world.
+      Take care of our global garden just as your gardeners take care of yours.
+    </p>
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+
+    <h1>My gardeners</h1>
+    <div class="gardeners-list">
+      <gar-gardener-card *ngFor="let g of gardeners" [gardener]="g"></gar-gardener-card>
+    </div>
+    <button mat-raised-button color="primary" routerLink="/order">Order a gardner</button>
   </div>
-  <button mat-raised-button color="primary">Order a new gardner</button>
-
-  <gar-order-form></gar-order-form>
-
-
-<!--  <div class="gardeners-list">-->
-<!--    <gar-gardener-card></gar-gardener-card>-->
-<!--    <gar-gardener-card></gar-gardener-card>-->
-<!--  </div>-->
 
   <div class="plants">
-    <button mat-fab color="primary" routerLink="/specimen-form" class="add-button">
-      <mat-icon>add</mat-icon>
-    </button>
+
+
+    <h1>My plants</h1>
 
     <div class="plant-list">
       <gar-plant-card *ngFor="let specimen of specimens" [specimen]="specimen" class="plant"></gar-plant-card>
     </div>
+
+
+    <button mat-fab color="primary" routerLink="/specimen-form" class="add-button">
+      <mat-icon>add</mat-icon>
+    </button>
+
   </div>
+
 
 </div>

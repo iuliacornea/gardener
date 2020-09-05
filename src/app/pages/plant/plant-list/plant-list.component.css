@@ -1,6 +1,10 @@
-.plant-list-container {
-  margin-top: var(--headerHeight);
+:host {
   background-color: var(--dark-green);
+  margin-top: var(--headerHeight);
+}
+
+.plant-list-container {
+  margin-top: var(--form-fields-margin-top);
 }
 
 h1 {

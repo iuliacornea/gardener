@@ -13,6 +13,7 @@ import {BASE_PATH as GARDEN_API_BASE_PATH} from '@iuliacornea/gardener-api';
 import { environment } from './../environments/environment';
 import {OrdersComponent} from './pages/orders/orders.component';
 import {GreenhouseStatisticsComponent} from './pages/greenhouse-statistics/greenhouse-statistics.component';
+import {OrderFormComponent} from './pages/order-form/order-form.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'gardener-statistics/:gardenerId',
     component: GreenhouseStatisticsComponent
+  },
+  {
+    path: 'order',
+    component: OrderFormComponent
   },
   {
     path: '',
