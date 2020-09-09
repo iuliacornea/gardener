@@ -3,6 +3,11 @@ import {GardenersService, GreenhouseService, GreenhouseStatsDto, SpecimensServic
 import {LocalStorageHelper} from '../../services/LocalStorageHelper';
 import {ActivatedRoute, ActivatedRouteSnapshot} from '@angular/router';
 import {Local} from 'protractor/built/driverProviders';
+import {Observable} from 'rxjs';
+
+function delay(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 @Component({
     selector: 'gar-greenhouse-statistics',
@@ -26,25 +31,31 @@ export class GreenhouseStatisticsComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        const routeSnapshot = this.route.snapshot;
-        this.gardenerId = routeSnapshot.paramMap.get('gardenerId') !== 'null' && routeSnapshot.paramMap.get('gardenerId');
-        if (!!this.gardenerId) {
-            this.gardenersService.getGardener(LocalStorageHelper.userToken(), this.gardenerId).subscribe(gardener => {
-                this.gardenerName = gardener.name;
-            });
-        }
-        this.specimenId = routeSnapshot.paramMap.get('specimenId') !== 'null' && routeSnapshot.paramMap.get('specimenId');
-        if (!!this.specimenId) {
-            this.specimensService.getSpecimen(this.specimenId, LocalStorageHelper.userToken()).subscribe(specimen => {
-                this.specimenName = specimen.name;
-            });
-        }
-        this.statisticsService.getStats(LocalStorageHelper.userToken(), this.gardenerId, this.specimenId).subscribe(response => {
+        (async () => {
+            const routeSnapshot = this.route.snapshot;
+            this.gardenerId = routeSnapshot.paramMap.get('gardenerId') !== 'null' && routeSnapshot.paramMap.get('gardenerId');
+            if (!!this.gardenerId) {
+                this.gardenersService.getGardener(LocalStorageHelper.userToken(), this.gardenerId).subscribe(gardener => {
+                    this.gardenerName = gardener.name;
+                });
+            }
+            this.specimenId = routeSnapshot.paramMap.get('specimenId') !== 'null' && routeSnapshot.paramMap.get('specimenId');
+            if (!!this.specimenId) {
+                this.specimensService.getSpecimen(this.specimenId, LocalStorageHelper.userToken()).subscribe(specimen => {
+                    this.specimenName = specimen.name;
+                });
+            }
+            this.statisticsService.getStats(LocalStorageHelper.userToken(), this.gardenerId, this.specimenId).subscribe(response => {
 
-            this.dataSource = response.sort((a, b) => {
-                return new Date(b.receivedAt).getTime() - new Date(a.receivedAt).getTime();
+                this.dataSource = response.sort((a, b) => {
+                    return new Date(b.receivedAt).getTime() - new Date(a.receivedAt).getTime();
+                });
             });
-        });
+
+            await delay(30000);
+
+            this.ngOnInit();
+        })();
     }
 
 }
