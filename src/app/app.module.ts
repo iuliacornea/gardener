@@ -126,7 +126,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   providers: [
     {
       provide: BASE_PATH,
-      useValue: '/api'
+      useValue: 'https://gardener-backend.herokuapp.com/api'
     }
   ],
   bootstrap: [AppComponent]

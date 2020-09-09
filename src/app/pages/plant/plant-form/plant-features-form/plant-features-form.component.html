@@ -10,7 +10,7 @@
 <div class="section">
   <label>{{"FORM.FLOWER_LABEL" | translate}}</label>
   <mat-button-toggle-group #flowerGroup="matButtonToggleGroup"
-                           [(ngModel)]="featuresConfig.flowerExistance">
+                           [(ngModel)]="featuresConfig.flowerExistence">
     <mat-button-toggle *ngFor="let val of flowerExistance" value="{{val}}">
       {{"FORM.FLOWER." + val | translate}}
     </mat-button-toggle>

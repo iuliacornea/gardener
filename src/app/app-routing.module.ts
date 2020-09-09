@@ -84,7 +84,7 @@ const routes: Routes = [
   providers: [
     {
       provide: GARDEN_API_BASE_PATH,
-      useValue: 'https://gardener-backend.herokuapp.com'
+      useValue: 'https://gardener-backend.herokuapp.com/api'
     }
   ]
 })
