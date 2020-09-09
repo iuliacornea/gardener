@@ -125,5 +125,10 @@
       "VERY_HIGH": "Very high"
     },
     "SAVE": "Save"
-  }
+  },
+  "COMPLETED": "Completed",
+  "PENDING_APPROVAL": "Pending approval",
+  "APPROVED": "Approved",
+  "MODIFIED_PENDING_APPROVAL": "Modified pending approval",
+  "CANCELLED": "Cancelled"
 }

@@ -30,6 +30,7 @@
     <mat-form-field appearance="outline">
       <mat-label>Gardener</mat-label>
       <mat-select [(ngModel)]="specimen.gardenerId">
+        <mat-option [value]=""></mat-option>
         <mat-option *ngFor="let val of gardeners" [value]="val.id">
           {{val.name}}
         </mat-option>

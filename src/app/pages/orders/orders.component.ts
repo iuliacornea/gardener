@@ -60,6 +60,10 @@ export class OrdersComponent implements OnInit {
   }
 
   private handleErrorOnOrderUpdate(error: any): void {
-    this._snackBar.open(error.status, null, SnackBarHelper.error);
+    if (error.status === 401) {
+      this._snackBar.open('The order can no longer be modified', null, SnackBarHelper.error);
+    } else {
+      this._snackBar.open(error.status, null, SnackBarHelper.error);
+    }
   }
 }

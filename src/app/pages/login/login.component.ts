@@ -36,7 +36,11 @@ export class LoginComponent implements OnInit {
     };
     this.authenticationService.loginUser(user).subscribe(response => {
       LocalStorageHelper.storeUser(response);
-      this.router.navigate(['/garden']);
+      if (response.role === UserRole.ADMIN) {
+        this.router.navigate(['/orders']);
+      } else {
+        this.router.navigate(['/garden']);
+      }
     }, error => {
       let message = 'There was an error while logging in.';
       if (error.status === 401) {

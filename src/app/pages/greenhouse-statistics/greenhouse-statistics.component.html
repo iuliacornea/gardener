@@ -1,10 +1,12 @@
 <div class="statistics">
-  <h1 *ngIf="!specimenId && !!gardenerId">
-    One pot statistics from {{gardenerId}} the gardener
+  <h1 *ngIf="!specimenName && !!gardenerName">
+    One pot statistics from gardener {{gardenerName}}
   </h1>
-  <h1 *ngIf="!!specimenId && !gardenerId">
-    One pot statistics for {{specimenId}} the plant
+  <h1 *ngIf="!!specimenName && !gardenerName">
+    One pot statistics for plant {{specimenName}}
   </h1>
+
+
 
   <table mat-table [dataSource]="dataSource" class="statistics-table">
 
@@ -49,6 +51,11 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+
+  <ng-container *ngIf="!dataSource || dataSource.length == 0">
+    <mat-divider></mat-divider>
+    <p>There is not data available</p>
+  </ng-container>
 </div>
 
 
